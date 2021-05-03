@@ -64,7 +64,6 @@
 
 // .checkbox애 focus가 되었을 때 .icon 영역에 outline 스타일이 적용되도록 설정
 .checkbox:focus + .icon{
- box-shadow: 0 0 0 2px $primaryBlue;
 }
 
 // .checkbox의 배경 이미지 (Square 유형)
