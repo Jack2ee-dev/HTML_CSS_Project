@@ -18,12 +18,8 @@
   
   // 기본 버튼 --------------------------------------------------------------------- /
   &Primary{
-    background: $grayscaleWhite;
-    color: $primaryBlue;
 
     &.is--disabled{
-      background: $grayscaleSnow;
-      color: $accentAmber;
       .icon::before{
         background-image: url(../images/icon-arrow-amber.svg);
       }
@@ -31,13 +27,9 @@
   }
   // 아웃라인 버튼 ------------------------------------------------------------------- /
   &Outline{
-    color: $grayscaleSnow;
-    border: 1px solid $grayscaleWhite;
     background: transparent;
 
      &.is--disabled{
-      border-color: $accentAmber;
-      color: $accentAmber;
       .icon::before{
         background-image: url(../images/icon-arrow-amber.svg);
       }
