@@ -1,11 +1,10 @@
 // 아이콘 스타일 ------------------------------------------------------------------ /
 .icon{
-
   // 아이콘 공통 -------------------------------------------------------------------- /
   position: relative;
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   vertical-align: middle;
 
   // 아이콘 요소를 보이지 않도록 설정할 때
@@ -22,15 +21,16 @@
     left: 0;
     right: 0;
     bottom: 0;
+    background-image: url(../images/ico_comm_201125.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: 100% 100%;
+    background-size: 830px 230px;
   }
 
   // 검색 ------------------------------------------------------------------------ /
   &Search{
     &::before{
-      background-image: url(../../images/icon-search.svg);
+      background-position: em(-260) em(-30);
     }
   }
 
@@ -42,9 +42,9 @@
   }
 
   // 햄버거 -------------------------------------------------------------------- /
-  &Burger{
+  &Sidemenu{
     &::before{
-      background-image: url(../images/button-navigation.svg);
+      background-position: em(-210) em(-30);
     }
   }
 
