@@ -1,5 +1,5 @@
 // 아이콘 스타일 ------------------------------------------------------------------ /
-.icon{
+.icon {
   // 아이콘 공통 -------------------------------------------------------------------- /
   position: relative;
   display: inline-block;
@@ -8,11 +8,28 @@
   vertical-align: middle;
 
   // 아이콘 요소를 보이지 않도록 설정할 때
-  &None{
+  &None {
     display: none;
   }
 
-  &::before{
+  &RightArrow {
+    position: relative;
+    font-size: 16px;
+    width: em(15);
+    height: em(15);
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: em(30);
+      height: em(30);
+      background-image: url(../images/ico_comm_201125.png);
+      background-position: em(-320) em(-100);
+      // background-size: em(30) em(30);
+    }
+  }
+
+  &::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -35,7 +52,7 @@
   }
 
   // 닫기 ------------------------------------------------------------------------ /
-  &Close{
+  &Close {
     position: absolute;
     top: 0;
     right: 0;
@@ -110,14 +127,14 @@
   }
 
   // 처음으로 가기 (GoToTop) ------------------------------------------------------------ /
-  &GoToTop{
+  &GoToTop {
     position: fixed;
     right: 30px;
     bottom: 276px;
     width: 50px;
     height: 50px;
 
-    &::before{
+    &::before {
       background-image: url(../images/icon-go-to-top.svg);
     }
   }
