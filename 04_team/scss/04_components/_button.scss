@@ -17,28 +17,20 @@
   }
 
   // 기본 버튼 --------------------------------------------------------------------- /
-  &Primary {
-    // background: #ccc;
-    // color: $primaryBlue;
-
-    &.is--disabled {
-      // background: $grayscaleSnow;
-      // color: $accentAmber;
-      .icon::before {
+  &Primary{
+    &.is--disabled{
+      .icon::before{
         background-image: url(../images/icon-arrow-amber.svg);
       }
     }
   }
+  
   // 아웃라인 버튼 ------------------------------------------------------------------- /
-  &Outline {
-    // color: $grayscaleSnow;
-    border: 1px solid #ccc;
+  &Outline{
     background: transparent;
 
-    &.is--disabled {
-      // border-color: $accentAmber;
-      // color: $accentAmber;
-      .icon::before {
+     &.is--disabled{
+      .icon::before{
         background-image: url(../images/icon-arrow-amber.svg);
       }
     }
