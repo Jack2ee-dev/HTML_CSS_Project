@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style.css" />
   <title>Document</title>
 </head>
 
@@ -48,18 +48,22 @@
         </ul>
       </nav>
       <!-- 왼쪽 사이드바 -->
-      <div class="header__drawer isClose">
+      <div class="header__drawer isOpen">
         <!-- 헤더 마크업 문제 2 시작 -->
         <section class="membership">
           <h2 class="a11yHidden">로그인 및 회원정보</h2>
           <div class="membership__info isLogin">
-            <a href="#">로그인</a>
+            <a href="#">로그인<span class="icon iconLogin"></span></a>
           </div>
           <ul class="membership__menu">
-            <li class="membership__item"><a href="#">구매내역</a></li>
-            <li class="membership__item"><a href="#">선물함</a></li>
-            <li class="membership__item"><a href="#">쿠폰함</a></li>
-            <li class="membership__item"><a href="#">좋아요</a></li>
+            <li class="membership__item"><a class="membership__link" href="#"><span
+                  class="icon iconPurchase"></span>구매내역</a></li>
+            <li class="membership__item"><a class="membership__link" href="#"><span
+                  class="icon iconPresent"></span>선물함</a></li>
+            <li class="membership__item"><a class="membership__link" href="#"><span
+                  class="icon iconCoupon"></span>쿠폰함</a></li>
+            <li class="membership__item"><a class="membership__link" href="#"><span class="icon iconLike"></span>좋아요</a>
+            </li>
           </ul>
         </section>
         <!-- 헤더 마크업 문제 2 끝 -->
@@ -67,20 +71,21 @@
         <section class="others">
           <h2 class="a11yHidden">기타 네비게이션 메뉴</h2>
           <ul class="others__menu">
-            <li class="others__item">새소식</li>
-            <li class="others__item">자주묻는 질문</li>
-            <li class="others__item">이모티콘 일련번호 입력하기</li>
-            <li class="others__item">로그아웃</li>
+            <li class="others__item"><a class="others__link" href="#">새소식</a></li>
+            <li class="others__item"><a class="others__link" href="#">자주묻는 질문</a></li>
+            <li class="others__item"><a class="others__link" href="#">이모티콘 일련번호 입력하기</a></li>
+            <li class="others__item"><a class="others__link" href="#">로그아웃</a></li>
           </ul>
         </section>
 
         <div class="header__companyInfo">
-          <img alt="kakaoemoticon shop" src="#" />
-          <a aria-label="주식회사 카카오">@ kakao Corp</a>
+          <a href="#"><span class="logo__img"></span></a>
+          <a class="kakao__link" href="https://www.kakaocorp.com/" target="_blank" rel="noopener noreferrer" aria-label="주식회사 카카오">@ kakao Corp</a>
         </div>
-        <button class="button closeButton">
-          <span class="icon closeIcon"></span>
-        </button>
+
+        <a role="button">
+          <span class="icon iconClose"></span>
+        </a>
       </div>
     </header>
     <aside class="asideAds" aria-label="어떤 aside 인지 구분을 위해">
@@ -88,7 +93,7 @@
         <a class="asideAds__link">
           이게 다 무료라고? 이모티콘 플러스<span class="icon adsIcon"></span></a>
       </h2>
-      <button class="button closeButton"></button>
+      <!-- <button class="button closeButton"></button> -->
     </aside>
     <main class="main">
       <aside class="homeBanner">
