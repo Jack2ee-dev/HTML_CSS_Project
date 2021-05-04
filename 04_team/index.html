@@ -1,116 +1,165 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <title>Document</title>
-</head>
-<body>
-  <!-- 페이지마다 다른 레이아웃을 둘 때, div로 묶어서 사용 -->
-  <div class="kakakoEmoticon">
-    <header class="header">
-      <!-- 햄버기 ~ 로그인 -->
-      <div class="upper">
-        <h1 class="header__logo">
-          <!-- 로고 -->
-          <a href="#">
-            <span role="img" class="logo__img"></span>
-          </a>
-        </h1>
-        <button class="buttonNone upper__openButton" aria-label="사이드메뉴 열기" title="사이드메뉴 열기">
-          <span class="icon iconSidemenu" />
-        </button>
-        <button class="buttonNone upper__searchButton" aria-label="이모티콘 검색">
-          <span class="icon iconSearch"></span>
-        </button>
-        <!-- <a class="upper__loginLink" href="#">로그인</a> -->
-      </div>
-      <!-- 홈 신규 ~ -->
-      <nav class="navigation">
-        <h2 class="a11yHidden">메인 메뉴</h2>
-        <ul class="navigation__list">
-          <li class="navigation__item is-selected">
-            <a class="navigation__link" href="#">홈</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">신규</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">인기</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">스타일</a>
-          </li>
-        </ul>
-      </nav>
-      <!-- 왼쪽 사이드바 -->
-      <div class="header__drawer isOpen">
-        <!-- 헤더 마크업 문제 2 시작 -->
-        <section class="membership">
-          <h2 class="a11yHidden">로그인 및 회원정보</h2>
-          <div class="membership__info isLogin">
-            <a href="#">로그인<span class="icon iconLogin"></span></a>
-          </div>
-          <ul class="membership__menu">
-            <li class="membership__item"><a class="membership__link" href="#"><span
-                  class="icon iconPurchase"></span>구매내역</a></li>
-            <li class="membership__item"><a class="membership__link" href="#"><span
-                  class="icon iconPresent"></span>선물함</a></li>
-            <li class="membership__item"><a class="membership__link" href="#"><span
-                  class="icon iconCoupon"></span>쿠폰함</a></li>
-            <li class="membership__item"><a class="membership__link" href="#"><span class="icon iconLike"></span>좋아요</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 페이지마다 다른 레이아웃을 둘 때, div로 묶어서 사용 -->
+    <div class="kakakoEmoticon">
+      <header class="header">
+        <!-- 햄버기 ~ 로그인 -->
+        <div class="upper">
+          <h1 class="header__logo">
+            <!-- 로고 -->
+            <a href="#">
+              <span role="img" class="logo__img"></span>
+            </a>
+          </h1>
+          <button
+            class="buttonNone upper__openButton"
+            aria-label="사이드메뉴 열기"
+            title="사이드메뉴 열기"
+          >
+            <span class="icon iconSidemenu" />
+          </button>
+          <button
+            class="buttonNone upper__searchButton"
+            aria-label="이모티콘 검색"
+          >
+            <span class="icon iconSearch"></span>
+          </button>
+          <!-- <a class="upper__loginLink" href="#">로그인</a> -->
+        </div>
+        <!-- 홈 신규 ~ -->
+        <nav class="navigation">
+          <h2 class="a11yHidden">메인 메뉴</h2>
+          <ul class="navigation__list">
+            <li class="navigation__item is-selected">
+              <a class="navigation__link" href="#">홈</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">신규</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">인기</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">스타일</a>
             </li>
           </ul>
-        </section>
-        <!-- 헤더 마크업 문제 2 끝 -->
+        </nav>
+        <!-- 왼쪽 사이드바 -->
+        <div class="header__drawer">
+          <!-- 헤더 마크업 문제 2 시작 -->
+          <section class="membership">
+            <h2 class="a11yHidden">로그인 및 회원정보</h2>
+            <div class="membership__info isLogin">
+              <a href="#">로그인<span class="icon iconLogin"></span></a>
+            </div>
+            <ul class="membership__menu">
+              <li class="membership__item">
+                <a class="membership__link" href="#"
+                  ><span class="icon iconPurchase"></span>구매내역</a
+                >
+              </li>
+              <li class="membership__item">
+                <a class="membership__link" href="#"
+                  ><span class="icon iconPresent"></span>선물함</a
+                >
+              </li>
+              <li class="membership__item">
+                <a class="membership__link" href="#"
+                  ><span class="icon iconCoupon"></span>쿠폰함</a
+                >
+              </li>
+              <li class="membership__item">
+                <a class="membership__link" href="#"
+                  ><span class="icon iconLike"></span>좋아요</a
+                >
+              </li>
+            </ul>
+          </section>
+          <!-- 헤더 마크업 문제 2 끝 -->
 
-        <section class="others">
-          <h2 class="a11yHidden">기타 네비게이션 메뉴</h2>
-          <ul class="others__menu">
-            <li class="others__item"><a class="others__link" href="#">새소식</a></li>
-            <li class="others__item"><a class="others__link" href="#">자주묻는 질문</a></li>
-            <li class="others__item"><a class="others__link" href="#">이모티콘 일련번호 입력하기</a></li>
-            <li class="others__item"><a class="others__link" href="#">로그아웃</a></li>
-          </ul>
-        </section>
-        
-         <div class="header__companyInfo">
-          <a href="#"><span class="logo__img"></span></a>
-          <a class="kakao__link" href="https://www.kakaocorp.com/" target="_blank" rel="noopener noreferrer" aria-label="주식회사 카카오">@ kakao Corp</a>
+          <section class="others">
+            <h2 class="a11yHidden">기타 네비게이션 메뉴</h2>
+            <ul class="others__menu">
+              <li class="others__item">
+                <a class="others__link" href="#">새소식</a>
+              </li>
+              <li class="others__item">
+                <a class="others__link" href="#">자주묻는 질문</a>
+              </li>
+              <li class="others__item">
+                <a class="others__link" href="#">이모티콘 일련번호 입력하기</a>
+              </li>
+              <li class="others__item">
+                <a class="others__link" href="#">로그아웃</a>
+              </li>
+            </ul>
+          </section>
+
+          <div class="header__companyInfo">
+            <a href="#"><span class="logo__img"></span></a>
+            <a
+              class="kakao__link"
+              href="https://www.kakaocorp.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="주식회사 카카오"
+              >@ kakao Corp</a
+            >
+          </div>
+
+          <a role="button">
+            <span class="icon iconClose"></span>
+          </a>
         </div>
+      </header>
 
-        <a role="button">
-          <span class="icon iconClose"></span>
-        </a>
-      </div>
-    </header>
-    
-    <aside class="asideAds" aria-label="어떤 aside 인지 구분을 위해">
-      <h2>
-        <a class="asideAds__link">
-          이게 다 무료라고? 이모티콘 플러스<span class="icon adsIcon"></span></a>
-      </h2>
-      <!-- <button class="button closeButton"></button> -->
-    </aside>
-    
-    <main class="main">
-      <aside class="homeBanner">
-        <h2 class="a11yHidden">톡 하나도 센스있게! 이모티콘 플러스</h2>
-        <a class="homeBanner__link">
-          <img alt="이모티콘 플러스 광고 배너 이미지" src="#" /></a>
+      <aside class="asideAds" aria-label="어떤 aside 인지 구분을 위해">
+        <h2>
+          <a class="asideAds__link">
+            이게 다 무료라고? 이모티콘 플러스<span class="icon adsIcon"></span
+          ></a>
+        </h2>
+        <!-- <button class="button closeButton"></button> -->
       </aside>
+
+      <main class="main">
+        <aside class="homeBanner">
+          <h2 class="a11yHidden">톡 하나도 센스있게! 이모티콘 플러스</h2>
+          <a class="homeBanner__link">
+            <img alt="이모티콘 플러스 광고 배너 이미지" src="#"
+          /></a>
+        </aside>
         <article class="newEmoticon">
           <h2 class="articleHeading">
-            <a href="#">신규 이모티콘<span class="icon iconRightArrow" aria-label="신규 이모티콘 링크"></span></a>
+            <a href="#"
+              >신규 이모티콘<span
+                class="icon iconRightArrow"
+                aria-label="신규 이모티콘 링크"
+              ></span
+            ></a>
           </h2>
           <ul class="newEmoticon__list swipeable">
             <li class="newEmoticon__item">
               <a href="" class="newEmoticon__link">
                 <figure class="emoticon-vertical">
-                  <img class="emoticon__img img__default" alt="" src="./images/newEmoticon/2af7f481c535cdf216aefe68d070849c617ea012db208c18f6e83b1a90a7baa7.png" />
-                  <img class="emoticon__img img__hover" alt="" src="./images/newEmoticon/2af7f481c535cdf216aefe68d070849cf43ad912ad8dd55b04db6a64cddaf76d.gif" />
+                  <img
+                    class="emoticon__img img__default"
+                    alt=""
+                    src="./images/newEmoticon/2af7f481c535cdf216aefe68d070849c617ea012db208c18f6e83b1a90a7baa7.png"
+                  />
+                  <img
+                    class="emoticon__img img__hover"
+                    alt=""
+                    src="./images/newEmoticon/2af7f481c535cdf216aefe68d070849cf43ad912ad8dd55b04db6a64cddaf76d.gif"
+                  />
                   <figcaption class="emoticon__name">
                     나비는 내 친구야
                   </figcaption>
@@ -120,19 +169,33 @@
             <li class="newEmoticon__item">
               <a href="" class="newEmoticon__link">
                 <figure class="emoticon-vertical">
-                  <img class="emoticon__img img__default" alt="" src="./images/newEmoticon/2b2b802fd40b38f5d71670b282d388f0617ea012db208c18f6e83b1a90a7baa7.png" />
-                  <img class="emoticon__img img__hover" alt="" src="./images/newEmoticon/2b2b802fd40b38f5d71670b282d388f0f43ad912ad8dd55b04db6a64cddaf76d.gif" />
-                  <figcaption class="emoticon__name">
-                    쪼꼬미 쪼미
-                  </figcaption>
+                  <img
+                    class="emoticon__img img__default"
+                    alt=""
+                    src="./images/newEmoticon/2b2b802fd40b38f5d71670b282d388f0617ea012db208c18f6e83b1a90a7baa7.png"
+                  />
+                  <img
+                    class="emoticon__img img__hover"
+                    alt=""
+                    src="./images/newEmoticon/2b2b802fd40b38f5d71670b282d388f0f43ad912ad8dd55b04db6a64cddaf76d.gif"
+                  />
+                  <figcaption class="emoticon__name">쪼꼬미 쪼미</figcaption>
                 </figure>
               </a>
             </li>
             <li class="newEmoticon__item">
               <a href="" class="newEmoticon__link">
                 <figure class="emoticon-vertical">
-                  <img class="emoticon__img img__default" alt="" src="./images/newEmoticon/010a601c6f13172071b00699e1a525c0617ea012db208c18f6e83b1a90a7baa7.png" />
-                  <img class="emoticon__img img__hover" alt="" src="./images/newEmoticon/010a601c6f13172071b00699e1a525c0f43ad912ad8dd55b04db6a64cddaf76d.gif" />
+                  <img
+                    class="emoticon__img img__default"
+                    alt=""
+                    src="./images/newEmoticon/010a601c6f13172071b00699e1a525c0617ea012db208c18f6e83b1a90a7baa7.png"
+                  />
+                  <img
+                    class="emoticon__img img__hover"
+                    alt=""
+                    src="./images/newEmoticon/010a601c6f13172071b00699e1a525c0f43ad912ad8dd55b04db6a64cddaf76d.gif"
+                  />
                   <figcaption class="emoticon__name">
                     날 소중히 해줘 펌베어
                   </figcaption>
@@ -142,8 +205,16 @@
             <li class="newEmoticon__item">
               <a href="" class="newEmoticon__link">
                 <figure class="emoticon-vertical">
-                  <img class="emoticon__img img__default" alt="" src="./images/newEmoticon/48a57695499349cbd6bcec1eaef93dcb617ea012db208c18f6e83b1a90a7baa7.png" />
-                  <img class="emoticon__img img__hover" alt="" src="./images/newEmoticon/48a57695499349cbd6bcec1eaef93dcbf43ad912ad8dd55b04db6a64cddaf76d.gif" />
+                  <img
+                    class="emoticon__img img__default"
+                    alt=""
+                    src="./images/newEmoticon/48a57695499349cbd6bcec1eaef93dcb617ea012db208c18f6e83b1a90a7baa7.png"
+                  />
+                  <img
+                    class="emoticon__img img__hover"
+                    alt=""
+                    src="./images/newEmoticon/48a57695499349cbd6bcec1eaef93dcbf43ad912ad8dd55b04db6a64cddaf76d.gif"
+                  />
                   <figcaption class="emoticon__name">
                     오바좀 그만해 햄슥아
                   </figcaption>
@@ -153,8 +224,16 @@
             <li class="newEmoticon__item">
               <a href="" class="newEmoticon__link">
                 <figure class="emoticon-vertical">
-                  <img class="emoticon__img img__default" alt="" src="./images/newEmoticon/56a511ded0a1289d167ad6a441854bff617ea012db208c18f6e83b1a90a7baa7.png" />
-                  <img class="emoticon__img img__hover" alt="" src="./images/newEmoticon/56a511ded0a1289d167ad6a441854bfff43ad912ad8dd55b04db6a64cddaf76d.gif" />
+                  <img
+                    class="emoticon__img img__default"
+                    alt=""
+                    src="./images/newEmoticon/56a511ded0a1289d167ad6a441854bff617ea012db208c18f6e83b1a90a7baa7.png"
+                  />
+                  <img
+                    class="emoticon__img img__hover"
+                    alt=""
+                    src="./images/newEmoticon/56a511ded0a1289d167ad6a441854bfff43ad912ad8dd55b04db6a64cddaf76d.gif"
+                  />
                   <figcaption class="emoticon__name">
                     동팔이와 두칠이
                   </figcaption>
@@ -164,8 +243,16 @@
             <li class="newEmoticon__item">
               <a href="" class="newEmoticon__link">
                 <figure class="emoticon-vertical">
-                  <img class="emoticon__img img__default" alt="" src="./images/newEmoticon/211cb65c3cc09bf3c7d16ebbbe6fe7fa617ea012db208c18f6e83b1a90a7baa7.png" />
-                  <img class="emoticon__img img__hover" alt="" src="./images/newEmoticon/211cb65c3cc09bf3c7d16ebbbe6fe7faf43ad912ad8dd55b04db6a64cddaf76d.gif" />
+                  <img
+                    class="emoticon__img img__default"
+                    alt=""
+                    src="./images/newEmoticon/211cb65c3cc09bf3c7d16ebbbe6fe7fa617ea012db208c18f6e83b1a90a7baa7.png"
+                  />
+                  <img
+                    class="emoticon__img img__hover"
+                    alt=""
+                    src="./images/newEmoticon/211cb65c3cc09bf3c7d16ebbbe6fe7faf43ad912ad8dd55b04db6a64cddaf76d.gif"
+                  />
                   <figcaption class="emoticon__name">
                     귀염뽀짝 애기뚱냥 4
                   </figcaption>
@@ -175,8 +262,16 @@
             <li class="newEmoticon__item">
               <a href="" class="newEmoticon__link">
                 <figure class="emoticon-vertical">
-                  <img class="emoticon__img img__default" alt="" src="./images/newEmoticon/663e4c760f7e7931c9434636caacecd4617ea012db208c18f6e83b1a90a7baa7.png" />
-                  <img class="emoticon__img img__hover" alt="" src="./images/newEmoticon/663e4c760f7e7931c9434636caacecd4f43ad912ad8dd55b04db6a64cddaf76d.gif" />
+                  <img
+                    class="emoticon__img img__default"
+                    alt=""
+                    src="./images/newEmoticon/663e4c760f7e7931c9434636caacecd4617ea012db208c18f6e83b1a90a7baa7.png"
+                  />
+                  <img
+                    class="emoticon__img img__hover"
+                    alt=""
+                    src="./images/newEmoticon/663e4c760f7e7931c9434636caacecd4f43ad912ad8dd55b04db6a64cddaf76d.gif"
+                  />
                   <figcaption class="emoticon__name">
                     풉키풉키! 얄밉쮸?
                   </figcaption>
@@ -186,8 +281,16 @@
             <li class="newEmoticon__item">
               <a href="" class="newEmoticon__link">
                 <figure class="emoticon-vertical">
-                  <img class="emoticon__img img__default" alt="" src="./images/newEmoticon/728b5c9b654bef23bef28cff9859ae98617ea012db208c18f6e83b1a90a7baa7.png" />
-                  <img class="emoticon__img img__hover" alt="" src="./images/newEmoticon/728b5c9b654bef23bef28cff9859ae98f43ad912ad8dd55b04db6a64cddaf76d.gif" />
+                  <img
+                    class="emoticon__img img__default"
+                    alt=""
+                    src="./images/newEmoticon/728b5c9b654bef23bef28cff9859ae98617ea012db208c18f6e83b1a90a7baa7.png"
+                  />
+                  <img
+                    class="emoticon__img img__hover"
+                    alt=""
+                    src="./images/newEmoticon/728b5c9b654bef23bef28cff9859ae98f43ad912ad8dd55b04db6a64cddaf76d.gif"
+                  />
                   <figcaption class="emoticon__name">
                     예쁜 말만 줄게요 2
                   </figcaption>
@@ -197,19 +300,33 @@
             <li class="newEmoticon__item">
               <a href="" class="newEmoticon__link">
                 <figure class="emoticon-vertical">
-                  <img class="emoticon__img img__default" alt="" src="./images/newEmoticon/ab4641e06850226d4bf4e3858a7582b8617ea012db208c18f6e83b1a90a7baa7.png" />
-                  <img class="emoticon__img img__hover" alt="" src="./images/newEmoticon/ab4641e06850226d4bf4e3858a7582b8f43ad912ad8dd55b04db6a64cddaf76d.gif" />
-                  <figcaption class="emoticon__name">
-                    입체티콘
-                  </figcaption>
+                  <img
+                    class="emoticon__img img__default"
+                    alt=""
+                    src="./images/newEmoticon/ab4641e06850226d4bf4e3858a7582b8617ea012db208c18f6e83b1a90a7baa7.png"
+                  />
+                  <img
+                    class="emoticon__img img__hover"
+                    alt=""
+                    src="./images/newEmoticon/ab4641e06850226d4bf4e3858a7582b8f43ad912ad8dd55b04db6a64cddaf76d.gif"
+                  />
+                  <figcaption class="emoticon__name">입체티콘</figcaption>
                 </figure>
               </a>
             </li>
             <li class="newEmoticon__item">
               <a href="" class="newEmoticon__link">
                 <figure class="emoticon-vertical">
-                  <img class="emoticon__img img__default" alt="" src="./images/newEmoticon/d6229cf93f63b041a134844de75f6837617ea012db208c18f6e83b1a90a7baa7.png" />
-                  <img class="emoticon__img img__hover" alt="" src="./images/newEmoticon/d6229cf93f63b041a134844de75f68377154249a3890514a43687a85e6b6cc82.png" />
+                  <img
+                    class="emoticon__img img__default"
+                    alt=""
+                    src="./images/newEmoticon/d6229cf93f63b041a134844de75f6837617ea012db208c18f6e83b1a90a7baa7.png"
+                  />
+                  <img
+                    class="emoticon__img img__hover"
+                    alt=""
+                    src="./images/newEmoticon/d6229cf93f63b041a134844de75f68377154249a3890514a43687a85e6b6cc82.png"
+                  />
                   <figcaption class="emoticon__name">
                     메롱뱀은 메에~롱!
                   </figcaption>
@@ -224,6 +341,36 @@
           </h2>
           <ol class="popularEmoticon__list">
             <!--before로 등수표현-->
+            <li class="popularEmoticon__item">
+              <a href="#">
+                <figure class="popularEmoticon__figure emoticon-horizontal">
+                  <figcaption class="popularEmoticon__figcaption">
+                    <h3 class="popularEmoticon__name">모죠티콘</h3>
+                    <p class="popularEmoticon__author">모죠</p>
+                  </figcaption>
+                  <img
+                    class="popularEmoticon__img"
+                    alt="모죠티콘 썸네일"
+                    src="./images/popularEmoticon/mozoticon_thumbnail.png"
+                  />
+                </figure>
+              </a>
+            </li>
+            <li class="popularEmoticon__item">
+              <a href="#">
+                <figure class="popularEmoticon__figure emoticon-horizontal">
+                  <figcaption class="popularEmoticon__figcaption">
+                    <h3 class="popularEmoticon__name">뽀시래기 짱큰콩</h3>
+                    <p class="popularEmoticon__author">실버벨</p>
+                  </figcaption>
+                  <img
+                    class="popularEmoticon__img"
+                    alt="뽀시래기 짱큰콩 썸네일"
+                    src="./images/popularEmoticon/tiny-big-bean_thumbnail.png"
+                  />
+                </figure>
+              </a>
+            </li>
             <li class="popularEmoticon__item">
               <a href="#">
                 <figure class="popularEmoticon__figure emoticon-horizontal">
@@ -370,43 +517,51 @@
               </ul>
             </li>
           </ul>
-      </article>
-    </main>
-    <footer class="footer">
-      <ul class="privacy">
-        <li class="privacy__item"><a>이용약관</a></li>
-        <li class="privacy__item"><a>유료이용약관</a></li>
-        <li class="privacy__item"><a>개인정보처리방침</a></li>
-        <li class="privacy__item"><a>기업고객</a></li>
-        <li class="privacy__item"><a>문의하기</a></li>
-      </ul>
-      <small class="copyright">
-        카카오 이모티콘샵에서 판매되는 콘텐츠의 저작권은 콘텐츠 제공자에게
-        있으며, 이를 무단 이용하는 경우 저작권법 등에 따라 처벌될 수 있습니다.
-      </small>
-      <details class="details">
-        <summary class="details__summary">&#169; kakao Corp.</summary>
-        <div class="aboutKakao">
-          <h3 class="aboutKakao__heading">주식회사 카카오</h3>
-          <address class="address">
-            <span class="address__content">대표자 여민수, 조수용</span>
-            <span class="address__content">사업자등록번호 120-81-47521
-              <a href="#">[사업자정보 확인]</a></span>
-            <span class="address__content">통신판매업 신고번호 제2015-제주아라-0032호</span>
-            <span class="address__content">제주특별자치도 제주시 첨단로 242(영평동)</span>
-            <span class="address__content">호스팅제공자 (주)카카오</span>
-          </address>
-        </div>
-        <div class="aboutCS">
-          <h3 class="aboutCS__heading">고객센터</h3>
-          <address class="address">
-            <a class="address__link" href="tel:1577-3754">1577-3754 (평일10시~19시)</a><a class="address__link"
-              href="mailto:help.notice@kakaocorp.com">help.notice@kakaocorp.com</a>
-          </address>
-        </div>
-      </details>
-    </footer>
-  </div>
-</body>
-
+        </article>
+      </main>
+      <footer class="footer">
+        <ul class="privacy">
+          <li class="privacy__item"><a>이용약관</a></li>
+          <li class="privacy__item"><a>유료이용약관</a></li>
+          <li class="privacy__item"><a>개인정보처리방침</a></li>
+          <li class="privacy__item"><a>기업고객</a></li>
+          <li class="privacy__item"><a>문의하기</a></li>
+        </ul>
+        <small class="copyright">
+          카카오 이모티콘샵에서 판매되는 콘텐츠의 저작권은 콘텐츠 제공자에게
+          있으며, 이를 무단 이용하는 경우 저작권법 등에 따라 처벌될 수 있습니다.
+        </small>
+        <details class="details">
+          <summary class="details__summary">&#169; kakao Corp.</summary>
+          <div class="aboutKakao">
+            <h3 class="aboutKakao__heading">주식회사 카카오</h3>
+            <address class="address">
+              <span class="address__content">대표자 여민수, 조수용</span>
+              <span class="address__content"
+                >사업자등록번호 120-81-47521
+                <a href="#">[사업자정보 확인]</a></span
+              >
+              <span class="address__content"
+                >통신판매업 신고번호 제2015-제주아라-0032호</span
+              >
+              <span class="address__content"
+                >제주특별자치도 제주시 첨단로 242(영평동)</span
+              >
+              <span class="address__content">호스팅제공자 (주)카카오</span>
+            </address>
+          </div>
+          <div class="aboutCS">
+            <h3 class="aboutCS__heading">고객센터</h3>
+            <address class="address">
+              <a class="address__link" href="tel:1577-3754"
+                >1577-3754 (평일10시~19시)</a
+              ><a class="address__link" href="mailto:help.notice@kakaocorp.com"
+                >help.notice@kakaocorp.com</a
+              >
+            </address>
+          </div>
+        </details>
+      </footer>
+    </div>
+  </body>
 </html>
