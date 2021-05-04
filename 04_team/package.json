@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "run-p dev watch:**",
+    "start": "run-p dev watch:sass",
     "htmlhint": "htmlhint '**/*.html'",
     "watch:htmlhint": "SHELL=/bin/bash chokidar --initial --silent '**/*.html' -c 'npm run htmlhint'",
     "sass": "sass scss:css",

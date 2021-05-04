@@ -7,7 +7,7 @@ $breakpoint: 768px;
   }
 }
 @mixin tabletOnly {
-  @media screen and (min-width: #{$breakpoint}) and (max-width: 940px){
+  @media screen and (min-width: #{$breakpoint}) and (max-width: 940px) {
     @content;
   }
 }

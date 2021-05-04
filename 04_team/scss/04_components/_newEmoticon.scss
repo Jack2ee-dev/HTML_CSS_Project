@@ -1,0 +1,83 @@
+.newEmoticon {
+  padding: em(30) 0 em(20) em(10);
+  max-width: em(1024);
+  @include autoMargin;
+  .articleHeading {
+    padding: em(10) 0;
+    font-size: em(24);
+    font-weight: 600;
+    a {
+      display: inline-block;
+    }
+  }
+  &__link {
+    display: block;
+    width: 100%;
+  }
+  &__list {
+    @include mobile {
+      @include flexbox(row, flex-start, center, nowrap);
+      overflow: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      scrollbar-width: none;
+    }
+    @include desktop {
+      @include flexbox(row, flex-start, center, wrap);
+      min-width: em(970);
+    }
+    @include tabletOnly {
+      @include flexbox(row, flex-start, center, wrap);
+      min-width: em(800);
+    }
+  }
+  &__item {
+    margin: em(10) 0 em(10) em(10);
+    padding-bottom: em(20);
+    min-width: em(180);
+    border-radius: em(10);
+    box-shadow: 0 2px 10px 0 rgb(0 0 0 / 6%);
+    .emoticon__img {
+      display: block;
+      width: em(100);
+      @include autoMargin;
+    }
+    .img__hover {
+      display: none;
+    }
+    &:hover {
+      box-shadow: 0 2px 10px 0 rgb(0 0 0 / 6%);
+      .emoticon__name {
+        border-bottom: 1px solid $primaryBlack;
+        font-weight: 600;
+      }
+      .img__default {
+        display: none;
+      }
+      .img__hover {
+        display: block;
+      }
+    }
+    @include tabletOnly {
+      &:nth-child(n + 9) {
+        display: none;
+      }
+    }
+  }
+  .emoticon-vertical {
+    text-align: center;
+    padding-top: em(30);
+  }
+
+  .emoticon__name {
+    display: inline-block;
+    font-size: em(15);
+    line-height: em(16);
+    overflow: hidden;
+    white-space: wrap;
+    text-overflow: ellipsis;
+    font-weight: normal;
+    margin: em(16) em(20) 0 em(20);
+  }
+}
