@@ -501,24 +501,6 @@ template {
   margin: -1px;
 }
 
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(5px);
-  }
-}
-@keyframes spinner {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes transformNone {
-  to {
-    transform: none;
-  }
-}
 html {
   font-size: 16px;
   overflow-y: visible;
@@ -626,59 +608,62 @@ button {
 .icon::before {
   content: "";
   position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../images/ico_comm_201125.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 830px 230px;
 }
 .iconSearch::before {
-  background-image: url(../../images/icon-search.svg);
+  background-position: -16.25em -1.875em;
+}
+.iconClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.25em;
+  height: 1.25em;
+  text-align: center;
+  padding: 0.625em;
+  display: inline-blocks;
 }
 .iconClose::before {
   content: "×";
 }
-.iconBurger::before {
-  background-image: url(../images/button-navigation.svg);
+.iconSidemenu::before {
+  background-position: -13.125em -1.875em;
 }
-.iconVisible::before {
-  background-image: url(../images/icon-visible.svg);
+.iconPurchase, .iconPresent, .iconCoupon, .iconLike {
+  font-size: 16px;
+  width: 1.875em;
+  height: 1.875em;
+  margin-bottom: 0.375em;
 }
-.iconInVisible::before {
-  background-image: url(../images/icon-invisible.svg);
+.iconLogin {
+  font-size: 16px;
+  width: 0.625em;
+  height: 0.625em;
+  margin-left: 0.3125em;
 }
-.iconCheckedSquare::before {
-  background-image: url(../images/icon-checked-square.svg);
+.iconPurchase::before {
+  background-position: -13.125em -3.75em;
 }
-.iconUncheckedSquare::before {
-  background-image: url(../images/icon-unchecked-square.svg);
+.iconPresent::before {
+  background-position: -15em -3.75em;
 }
-.iconChecked::before {
-  background-image: url(../images/icon-checked.svg);
+.iconCoupon::before {
+  background-position: -16.875em -3.75em;
 }
-.iconWarning::before {
-  background-image: url(../images/icon-warning.svg);
+.iconLike::before {
+  background-position: -18.75em -3.75em;
 }
-.iconArrowUp::before {
-  background-image: url(../images/icon-arrow-up.svg);
-}
-.iconArrowDown::before {
-  background-image: url(../images/icon-arrow-down.svg);
-}
-.iconArrowDarkBlue::before {
-  background-image: url(../images/icon-arrow-darkblue.svg);
-}
-.iconArrowWhite::before {
-  background-image: url(../images/icon-arrow-white.svg);
-}
-.iconLoading::before {
-  animation: spinner 0.25s infinite;
-  background-image: url(../images/icon-arrow-loading.svg);
-}
-.iconGoToTop {
-  position: fixed;
-  right: 30px;
-  bottom: 276px;
-  width: 50px;
-  height: 50px;
-}
-.iconGoToTop::before {
-  background-image: url(../images/icon-go-to-top.svg);
+.iconLogin::before {
+  background-position: -18.125em -2.5em;
 }
 
 .newEmoticon {
@@ -780,6 +765,277 @@ button {
   text-overflow: ellipsis;
   font-weight: normal;
   margin: 1em 1.25em 0 1.25em;
+}
+
+.articleHeading > a {
+  color: red;
+}
+
+.popularEmoticon {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.popularEmoticon__list {
+  counter-reset: number;
+}
+.popularEmoticon__item {
+  display: none;
+  margin-right: 0;
+}
+.popularEmoticon__item::before {
+  content: counter(number);
+  display: block;
+  position: absolute;
+  font-size: 1.5rem;
+  left: 0;
+  top: 50%;
+  margin-top: -15px;
+}
+.popularEmoticon__list > :nth-child(-n+3) {
+  color: #fa4637;
+}
+.popularEmoticon__figure {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-left: 40px;
+  border-bottom: 1px solid #ccc;
+}
+.popularEmoticon__name {
+  color: #181818;
+}
+.popularEmoticon__author {
+  color: #999999;
+}
+.popularEmoticon__img {
+  width: 76px;
+  height: 76px;
+}
+@media screen and (max-width: 767px) {
+  .popularEmoticon__list > :nth-child(-n+5) {
+    display: block;
+    margin: 10px;
+    counter-increment: number;
+    position: relative;
+  }
+  .popularEmoticon__list > :nth-child(-n+5) a {
+    display: block;
+    padding: 5px 3px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .popularEmoticon__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 535px;
+    background-color: green;
+  }
+  .popularEmoticon__list > :nth-child(-n+5) {
+    background-color: pink;
+  }
+  .popularEmoticon__list > :nth-child(n+6) {
+    background-color: coral;
+  }
+  .popularEmoticon__item {
+    display: block;
+    margin: 10px;
+    counter-increment: number;
+    position: relative;
+  }
+  .popularEmoticon__item a {
+    display: block;
+    padding: 5px 3px;
+  }
+}
+
+.header {
+  position: sticky;
+}
+.upper {
+  padding: 0 0.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+.upper__openButton, .upper__searchButton {
+  width: 2.5em;
+  height: 3.125em;
+}
+.upper__openButton {
+  order: -1;
+}
+
+.header__logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex: 1 1 0;
+  height: 3.125em;
+  background: #fff;
+  z-index: -2;
+}
+.logo__img {
+  display: inline-block;
+  width: 11.875em;
+  height: 1.5em;
+  transform: scale(0.85);
+  background-image: url(../images/ico_comm_201125.png);
+  background-position: -13.125em 0em;
+  background-size: 830px 230px;
+}
+
+.header__drawer {
+  position: absolute;
+  background: #fff;
+  top: 0;
+  left: 0;
+  width: 18.125em;
+  height: 100vh;
+  padding-top: 1.125em;
+  display: none;
+}
+.isOpen {
+  display: block;
+}
+.isOpen::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.membership {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  border-bottom: 0.0625em solid rgba(0, 0, 0, 0.04);
+}
+.membership__info {
+  padding: 0.75em 1.25em;
+  font-size: 1.125em;
+  font-weight: 700;
+}
+.membership__menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  padding: 0 0.6875em 0.5625em;
+}
+.membership__menu a {
+  font-size: 0.8125em;
+  line-height: 1.1875em;
+}
+.membership__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 25%;
+  padding: 0.75em 0;
+}
+.membership__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: auto;
+}
+
+.others {
+  flex: 1 1 0;
+  width: 100%;
+}
+.others__menu {
+  border-bottom: 0.0625em solid rgba(0, 0, 0, 0.04);
+}
+.others__item {
+  color: #666666;
+}
+.others__link {
+  display: block;
+  padding: 0.6875em 1.25em;
+  width: 100%;
+  height: 100%;
+}
+
+.header__companyInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-top: 100%;
+  padding: 0.5625em 0.625em;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.kakao__link {
+  font-size: 12px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+.navigation__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 0 1em;
+  text-align: center;
+  max-width: 38.5em;
+}
+.navigation__item {
+  width: 25%;
+}
+.navigation__link {
+  display: inline-block;
+  font-size: 15px;
+  line-height: 3.2em;
+  height: 2.5em;
+  width: 100%;
+}
+.is-selected {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  font-weight: 800;
+}
+.is-selected::after {
+  content: "";
+  width: 100%;
+  height: 0.125em;
+  background: #000;
 }
 
 /*# sourceMappingURL=style.css.map */
