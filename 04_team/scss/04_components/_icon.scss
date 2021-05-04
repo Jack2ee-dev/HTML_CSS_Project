@@ -3,8 +3,8 @@
   // 아이콘 공통 -------------------------------------------------------------------- /
   position: relative;
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: em(24);
+  height: em(24);
   vertical-align: middle;
 
   // 아이콘 요소를 보이지 않도록 설정할 때
@@ -36,6 +36,14 @@
 
   // 닫기 ------------------------------------------------------------------------ /
   &Close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: em(20);
+    height: em(20);
+    text-align: center;
+    padding: em(10);
+    display: inline-blocks;
     &::before{
       content: '×';
     }
@@ -48,81 +56,56 @@
     }
   }
 
-  // 보기 -------------------------------------------------------------------- /
-  &Visible{
+  &Purchase,
+  &Present,
+  &Coupon,
+  &Like {
+    font-size: 16px;
+    width: em(30);
+    height: em(30);
+    margin-bottom: em(6);
+  }
+
+  &Login {
+    font-size: 16px;
+    width: em(10);
+    height: em(10);
+    margin-left: em(5);
+  }
+
+  // 구매내역 -------------------------------------------------------------------- /
+  &Purchase{
     &::before{
-      background-image: url(../images/icon-visible.svg);
+      background-position: em(-210) em(-60);
     }
   }
 
-  // 감추기 -------------------------------------------------------------------- /
-  &InVisible{
+  // 선물함 -------------------------------------------------------------------- /
+  &Present {
     &::before{
-      background-image: url(../images/icon-invisible.svg);
+      background-position: em(-240) em(-60);
     }
   }
 
-  // 체크박스 (Square 형) -------------------------------------------------------------------- /
-  &CheckedSquare{
+  // 쿠폰함 -------------------------------------------------------------------- /
+  &Coupon{
     &::before{
-      background-image: url(../images/icon-checked-square.svg);
+      background-position: em(-270) em(-60);
+
     }
   }
 
-  // 체크박스 해제 (Square 형) -------------------------------------------------------------------- /
-  &UncheckedSquare{
+  // 좋아요 -------------------------------------------------------------------- /
+  &Like {
     &::before{
-      background-image: url(../images/icon-unchecked-square.svg);
-    }
-  }
-
-  // 체크 상태 (Circle 형) -------------------------------------------------------------------- /
-  &Checked{
-    &::before{
-      background-image: url(../images/icon-checked.svg);
+      background-position: em(-300) em(-60);
     }
   }
 
   // 오류 및 경고 상태 -------------------------------------------------------------------- /
-  &Warning{
+  &Login {
     &::before{
-      background-image: url(../images/icon-warning.svg);
-    }
-  }
-
-  // 화살표 (Up) ------------------------------------------------------------ /
-  &ArrowUp{
-    &::before{
-      background-image: url(../images/icon-arrow-up.svg);
-    }
-  }
-
-  // 화살표 (Down) ------------------------------------------------------------ /
-  &ArrowDown{
-    &::before{
-      background-image: url(../images/icon-arrow-down.svg);
-    }
-  }
-
-  // 화살표 (Rignt) ------------------------------------------------------------ /
-  &ArrowDarkBlue{
-    &::before{
-      background-image: url(../images/icon-arrow-darkblue.svg);
-    }
-  }
-
-  // 화살표 (Right) ------------------------------------------------------------ /
-  &ArrowWhite{
-    &::before{
-      background-image: url(../images/icon-arrow-white.svg);
-    }
-  }
-
-  // 로딩 (Loading) ------------------------------------------------------------ /
-  &Loading{
-    &::before{
-      animation: spinner 0.25s infinite;
-      background-image: url(../images/icon-arrow-loading.svg);
+      background-position: em(-290) em(-40);
     }
   }
 
