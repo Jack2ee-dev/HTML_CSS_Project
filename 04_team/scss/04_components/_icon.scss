@@ -32,108 +32,97 @@
   &::before {
     content: '';
     position: absolute;
-
-    // background-repeat: no-repeat;
-    // background-position: 50% 50%;
-    // background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../images/ico_comm_201125.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 830px 230px;
   }
 
   // 검색 ------------------------------------------------------------------------ /
-  &Search {
-    &::before {
-      background-image: url(../../images/icon-search.svg);
+  &Search{
+    &::before{
+      background-position: em(-260) em(-30);
     }
   }
 
   // 닫기 ------------------------------------------------------------------------ /
   &Close {
-    &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: em(20);
+    height: em(20);
+    text-align: center;
+    padding: em(10);
+    display: inline-blocks;
+    &::before{
       content: '×';
     }
   }
 
   // 햄버거 -------------------------------------------------------------------- /
-  &Burger {
-    &::before {
-      background-image: url(../images/button-navigation.svg);
+  &Sidemenu{
+    &::before{
+      background-position: em(-210) em(-30);
     }
   }
 
-  // 보기 -------------------------------------------------------------------- /
-  &Visible {
-    &::before {
-      background-image: url(../images/icon-visible.svg);
+  &Purchase,
+  &Present,
+  &Coupon,
+  &Like {
+    font-size: 16px;
+    width: em(30);
+    height: em(30);
+    margin-bottom: em(6);
+  }
+
+  &Login {
+    font-size: 16px;
+    width: em(10);
+    height: em(10);
+    margin-left: em(5);
+  }
+
+  // 구매내역 -------------------------------------------------------------------- /
+  &Purchase{
+    &::before{
+      background-position: em(-210) em(-60);
     }
   }
 
-  // 감추기 -------------------------------------------------------------------- /
-  &InVisible {
-    &::before {
-      background-image: url(../images/icon-invisible.svg);
+  // 선물함 -------------------------------------------------------------------- /
+  &Present {
+    &::before{
+      background-position: em(-240) em(-60);
     }
   }
 
-  // 체크박스 (Square 형) -------------------------------------------------------------------- /
-  &CheckedSquare {
-    &::before {
-      background-image: url(../images/icon-checked-square.svg);
+  // 쿠폰함 -------------------------------------------------------------------- /
+  &Coupon{
+    &::before{
+      background-position: em(-270) em(-60);
+
     }
   }
 
-  // 체크박스 해제 (Square 형) -------------------------------------------------------------------- /
-  &UncheckedSquare {
-    &::before {
-      background-image: url(../images/icon-unchecked-square.svg);
-    }
-  }
-
-  // 체크 상태 (Circle 형) -------------------------------------------------------------------- /
-  &Checked {
-    &::before {
-      background-image: url(../images/icon-checked.svg);
+  // 좋아요 -------------------------------------------------------------------- /
+  &Like {
+    &::before{
+      background-position: em(-300) em(-60);
     }
   }
 
   // 오류 및 경고 상태 -------------------------------------------------------------------- /
-  &Warning {
-    &::before {
-      background-image: url(../images/icon-warning.svg);
-    }
-  }
-
-  // 화살표 (Up) ------------------------------------------------------------ /
-  &ArrowUp {
-    &::before {
-      background-image: url(../images/icon-arrow-up.svg);
-    }
-  }
-
-  // 화살표 (Down) ------------------------------------------------------------ /
-  &ArrowDown {
-    &::before {
-      background-image: url(../images/icon-arrow-down.svg);
-    }
-  }
-
-  // 화살표 (Rignt) ------------------------------------------------------------ /
-  &ArrowDarkBlue {
-    &::before {
-      background-image: url(../images/icon-arrow-darkblue.svg);
-    }
-  }
-
-  // 화살표 (Right) ------------------------------------------------------------ /
-  &ArrowWhite {
-    &::before {
-      background-image: url(../images/icon-arrow-white.svg);
-    }
-  }
-
-  // 로딩 (Loading) ------------------------------------------------------------ /
-  &Loading {
-    &::before {
-      animation: spinner 0.25s infinite;
-      background-image: url(../images/icon-arrow-loading.svg);
+  &Login {
+    &::before{
+      background-position: em(-290) em(-40);
     }
   }
 

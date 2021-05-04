@@ -44,7 +44,7 @@ git flow feature finish FEATURE_NAME # finish up feature
   
 - discord: github webhooks을 연동하여 github message를 공유한다.
 
-## 의존성 패키지 모듈 
+## 의존성 패키지 모듈
 
 | 패키지명 | 설명 |
 |-|-|

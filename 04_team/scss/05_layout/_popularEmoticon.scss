@@ -1,0 +1,91 @@
+// popularEmoticon 시작
+.articleHeading > a {
+  color: red;
+}
+
+.popularEmoticon {
+  max-width: 1024px;
+  margin: 0 auto;
+  &__list {
+    counter-reset: number;
+  }
+  &__item {
+    display: none;
+    margin-right: 0;
+  }
+  &__item::before {
+    content: counter(number);
+    // background-color: red;
+    display: block;
+    position: absolute;
+    font-size: 1.5rem;
+    left: 0;
+    top: 50%;
+    margin-top: -15px;
+  }
+
+  &__list > :nth-child(-n + 3) {
+    color: $accentRed;
+  }
+
+  &__figure {
+    @include flexbox($justify-content: space-between, $align-items: center);
+    margin-left: 40px;
+    // padding: 10px 0 10px 0;
+    border-bottom: 1px solid #ccc;
+  }
+  &__name {
+    color: #181818;
+  }
+  &__author {
+    color: #999999;
+  }
+  &__img {
+    width: 76px;
+    height: 76px;
+  }
+  @include mobile {
+    &__list > :nth-child(-n + 5) {
+      display: block;
+      margin: 10px;
+      counter-increment: number;
+      position: relative;
+      a {
+        display: block;
+        padding: 5px 3px;
+      }
+    }
+  }
+  @include desktop {
+    &__list {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 535px;
+      // height: popular_height(
+      //   $all_items_num: 10,
+      //   $colum_num: 2,
+      //   $list_height: 107px
+      // );
+      background-color: green;
+    }
+    &__item {
+    }
+    &__list > :nth-child(-n + 5) {
+      background-color: pink;
+    }
+    &__list > :nth-child(n + 6) {
+      background-color: coral;
+    }
+    &__item {
+      display: block;
+      margin: 10px;
+      counter-increment: number;
+      position: relative;
+      a {
+        display: block;
+        padding: 5px 3px;
+      }
+    }
+  }
+}
