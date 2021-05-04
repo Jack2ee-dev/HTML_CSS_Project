@@ -125,17 +125,4 @@
       background-position: em(-290) em(-40);
     }
   }
-
-  // 처음으로 가기 (GoToTop) ------------------------------------------------------------ /
-  &GoToTop {
-    position: fixed;
-    right: 30px;
-    bottom: 276px;
-    width: 50px;
-    height: 50px;
-
-    &::before {
-      background-image: url(../images/icon-go-to-top.svg);
-    }
-  }
 }
