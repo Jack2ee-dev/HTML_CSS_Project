@@ -1,5 +1,5 @@
 // 버튼 ----------------------------------------------------------------- /
-.button{
+.button {
   position: relative;
   text-align: center;
   font-size: rem(20px);
@@ -8,44 +8,44 @@
   border-radius: 8px;
   width: 100%;
   padding: 14px 20px 11px;
-  
+
   // 버튼의 테두리 여백 및 배경을 제거한 스타일 -------------------------------------------------- /
-  &None{
+  &None {
     border: 0;
     background: transparent;
     padding: 0;
   }
-  
-  // 기본 버튼 --------------------------------------------------------------------- /
-  &Primary{
-    background: $grayscaleWhite;
-    color: $primaryBlue;
 
-    &.is--disabled{
-      background: $grayscaleSnow;
-      color: $accentAmber;
-      .icon::before{
+  // 기본 버튼 --------------------------------------------------------------------- /
+  &Primary {
+    // background: #ccc;
+    // color: $primaryBlue;
+
+    &.is--disabled {
+      // background: $grayscaleSnow;
+      // color: $accentAmber;
+      .icon::before {
         background-image: url(../images/icon-arrow-amber.svg);
       }
     }
   }
   // 아웃라인 버튼 ------------------------------------------------------------------- /
-  &Outline{
-    color: $grayscaleSnow;
-    border: 1px solid $grayscaleWhite;
+  &Outline {
+    // color: $grayscaleSnow;
+    border: 1px solid #ccc;
     background: transparent;
 
-     &.is--disabled{
-      border-color: $accentAmber;
-      color: $accentAmber;
-      .icon::before{
+    &.is--disabled {
+      // border-color: $accentAmber;
+      // color: $accentAmber;
+      .icon::before {
         background-image: url(../images/icon-arrow-amber.svg);
       }
     }
   }
 
   // 배경색이 적용된 버튼 --------------------------------------------------------------- /
-  .icon{
+  .icon {
     min-width: 20px;
     height: 20px;
     position: absolute;
@@ -54,4 +54,3 @@
     transform: translateY(-50%);
   }
 }
-
