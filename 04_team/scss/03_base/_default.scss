@@ -18,7 +18,6 @@ html {
   // 탭 하이라이트 색상 설정 ------------------------------------------------------------- /
   body * {
     $highlightColor: #ffffc8;
-  
     -webkit-tap-highlight-color: rgba($highlightColor, 0.3);
     tap-highlight-color: rgba($highlightColor, 0.3);
   }
@@ -44,6 +43,7 @@ html {
   h1, h2, h3, h4, h5, h6{
     font-size: 100%;
     font-weight: inherit;
+    margin: 0;
   }
   
   // 목록 안쪽 여백 및 불릿 제거 ---------------------------------------------------------- /
