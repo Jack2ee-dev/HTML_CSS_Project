@@ -10,8 +10,6 @@
   }
   &__item {
     display: none;
-    width: 45%;
-    margin-right: 0;
   }
   &__item::before {
     content: counter(number);
@@ -75,14 +73,9 @@
       // );
       // background-color: green;
     }
-    &__list > :nth-child(-n + 5) {
-      // background-color: pink;
-    }
-    &__list > :nth-child(n + 6) {
-      // background-color: coral;
-    }
     &__item {
       display: block;
+      width: 45%;
       margin: 10px;
       counter-increment: number;
       position: relative;
