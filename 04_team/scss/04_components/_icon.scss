@@ -42,6 +42,22 @@
     }
   }
 
+  &Logo {
+    width: em(190);
+    height: em(24);
+    &::before {
+      background-position: em(-210) em(-2);
+    }
+  }
+
+  &LogoSmall {
+    width: em(140);
+    height: em(20);
+    &::before {
+      background-position: em(-210) em(-90);
+    }
+  }
+
   // 검색 ------------------------------------------------------------------------ /
   &Search {
     &::before {

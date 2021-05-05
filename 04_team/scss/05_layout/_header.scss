@@ -22,16 +22,7 @@
     @include flexbox($justify-content: center, $align-items: center);
     flex: 1 1 0;
     height: em(50);
-  }
-
-  @at-root .logo__img {
-    display: inline-block;
-    width: em(190);
-    height: em(24);
-    transform: scale(0.85);
-    background-image: url(../images/ico_comm_201125.png);
-    background-position: em(-210) em(0);
-    background-size: 830px 230px;
+    line-height: 0;
   }
 
   &__drawer {
