@@ -8,6 +8,7 @@
   }
   &__item {
     display: none;
+    margin-bottom: 10px;
   }
   &__item::before {
     content: counter(number);
@@ -25,6 +26,7 @@
 
   &__figure {
     @include flexbox($justify-content: space-between, $align-items: center);
+    padding-bottom: 10px;
     margin-left: 40px;
     border-bottom: 1px solid #ccc;
   }
@@ -78,7 +80,6 @@
       position: relative;
       a {
         display: block;
-        padding: 5px 3px;
       }
     }
     &__item:hover {
