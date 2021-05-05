@@ -26,16 +26,16 @@
   <link rel="icon" type="image/x-icon" href="./images/ico/ico_android_144x144.png" sizes="144x144">
   <link rel="apple-touch-icon" type="image/png" href="./images/ico/ico_ios_120x120.png" sizes="120x120">
   <link rel="apple-touch-icon" type="image/png" href="./images/ico/ico_ios_152x152.png" sizes="152x152">
-
 </head>
 
 <body>
+
   <!-- 페이지마다 다른 레이아웃을 둘 때, div로 묶어서 사용 -->
   <div class="kakaoEmoticon">
     <header class="header">
       <!-- 햄버기 ~ 로그인 -->
       <div class="upper">
-        <h1 class="header__logo">
+        <h1 class="header__logo" aria-label="카카오 이모티콘 샵 로고">
           <!-- 로고 -->
           <a href="#">
             <span role="img" class="logo__img"></span>
@@ -67,11 +67,11 @@
           </li>
         </ul>
       </nav>
+
       <!-- 왼쪽 사이드바 -->
       <div class="header__drawer">
-        <!-- 헤더 마크업 문제 2 시작 -->
         <div class="backdrop"></div>
-
+        <!-- 헤더 마크업 문제 2 시작 -->
         <div class="drawer__inner">
           <section class="membership">
             <h2 class="a11yHidden">로그인 및 회원정보</h2>
@@ -113,6 +113,22 @@
           </button>
         </div>
       </div>
+
+      <section class="emoticonSearch">
+        <h2 class="a11yHidden">이모티콘 검색어 입력</h2>
+        <div class="backdrop"></div>
+        <form action="#" class="emoticonSearch__form" method="POST">
+          <div class="emoticonSearch__form__inner">
+            <input type="text" name="emoticonSearchName" class="emoticonSearch__input" placeholder="이모티콘을 검색해보세요!" autofocus/>
+          </div>
+          <button class="buttonNone emoticonSearch__submitButton" aria-label="검색 버튼">
+            <span class="icon iconSearch"></span>
+          </button>
+          <button class="buttonNone emoticonSearch__closeButton" aria-label="취소 버튼">
+            <span class="icon iconClose"></span>
+          </button>
+        </form>
+      </section>
     </header>
 
     <aside class="asideAds" aria-label="어떤 aside 인지 구분을 위해">
@@ -120,7 +136,7 @@
         <a class="asideAds__link">
           이게 다 무료라고? 이모티콘 플러스<span class="icon adsIcon"></span></a>
       </h2>
-      <button class="buttonNone closeButton"></button>
+      <button class="buttonNone closeButton" aria-label="광고 배너 닫기 버튼"></button>
     </aside>
 
     <main class="main">
@@ -131,6 +147,7 @@
           <img src="./images/banner/kakao_emoticon_banner.jpeg" alt="이모티콘 플러스 배너 이미지" class="homeBanner__img">
         </a>
       </aside>
+
       <article class="newEmoticon">
         <h2 class="articleHeading">
           <a href="#">신규 이모티콘<span class="icon iconRightArrow" aria-label="신규 이모티콘 링크"></span></a>
@@ -459,6 +476,7 @@
   </div>
 
   <script src="./js/navigation.js"></script>
+  <script src="./js/search.js"></script>
 </body>
 
 </html>

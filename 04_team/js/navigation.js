@@ -3,9 +3,9 @@ const drawerCloseButton = document.querySelector(".drawer__closeButton");
 const headerDrawer = document.querySelector(".header__drawer");
 const backdrop = document.querySelector(".backdrop");
 
-const controlledComponent = [upperOpenButton, drawerCloseButton, backdrop];
+const controlledComponents = [upperOpenButton, drawerCloseButton, backdrop];
 
-controlledComponent.map((component) => {
+controlledComponents.map((component) => {
   component.addEventListener("click", () => {
     toggleDrawer();
     toggleBackdropOpen();
