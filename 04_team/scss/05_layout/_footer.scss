@@ -1,0 +1,84 @@
+.footer {
+  min-width: em(280);
+  color: $primaryGray2;
+  max-width: em(1024);
+  @include autoMargin;
+  @include mobile {
+    padding: 0 em(24);
+  }
+  @include desktop {
+    padding: 0 em(40);
+  }
+  @at-root .privacy {
+    margin-bottom: em(20);
+    @include clearFix;
+
+    &__item {
+      @include mobile {
+        margin-bottom: em(10);
+      }
+
+      @include desktop {
+        float: left;
+        margin-right: rem(20);
+        font-size: rem(13);
+      }
+    }
+  }
+  .copyright {
+    font-size: em(12);
+  }
+  @at-root .details {
+    margin-bottom: em(100);
+    cursor: pointer;
+    margin-top: em(20);
+    font-size: em(13);
+    summary ~ * {
+      animation: reveal 0.5s;
+    }
+    @include clearFix;
+    h3 {
+      padding-bottom: rem(5);
+      color: $primaryBlack;
+    }
+    .aboutKakao {
+      margin-top: em(10);
+
+      &__heading {
+      }
+      @include desktop {
+        display: inline-block;
+        width: 50%;
+        float: left;
+      }
+    }
+    .address {
+      line-height: em(20);
+      &__content {
+        display: block;
+        padding: em(5) 0;
+      }
+      &__link {
+        display: block;
+        padding: em(5) 0;
+      }
+    }
+    .aboutCS {
+      @include desktop {
+        display: inline-block;
+        width: 50%;
+      }
+    }
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -10px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
