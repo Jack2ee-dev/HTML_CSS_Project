@@ -1,10 +1,8 @@
 // popularEmoticon 시작
-.articleHeading > a {
-}
-
 .popularEmoticon {
-  max-width: 1024px;
-  margin: 0 auto;
+  padding: em(30) 0 em(20) em(10);
+  max-width: em(1024);
+  @include autoMargin;
   &__list {
     counter-reset: number;
   }
