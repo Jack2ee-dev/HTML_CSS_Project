@@ -36,17 +36,30 @@
 
   &__drawer {
     display: none;
-
     &--open {
+      display: block;
       position: fixed;
-      background: $white;
+      z-index: 1;
       top: 0;
       bottom: 0;
       right: 0;
       left: 0;
+    }
+  }
+
+  @at-root .drawer {
+    &__inner {
+      z-index: 1;
+      background: $white;
       width: em(290);
+      height: 100%;
       padding-top: em(25);
-      display: block;
+      position: relative;
+    }
+    &__closeButton {
+      position: absolute;
+      top: em(15, 16);
+      right: em(15, 16);
     }
   }
 
@@ -113,14 +126,6 @@
 
     @at-root .kakao__link {
       font-size: 12px;
-    }
-  }
-
-  @at-root .drawer {
-    &__closeButton {
-      position: absolute;
-      top: em(15, 16);
-      right: em(15, 16);
     }
   }
 }
