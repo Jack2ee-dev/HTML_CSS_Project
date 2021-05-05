@@ -1,0 +1,33 @@
+.stylishEmoticon {
+  .stylishEmoticon__list {
+    // @include flexbox($direction: column, $flex-wrap: nowrap);
+  }
+  &__subList {
+    @include flexbox($flex-wrap: nowrap);
+  }
+  &__subItem {
+    display: none;
+    img {
+      width: 96px;
+      height: 96px;
+    }
+  }
+
+  @include mobile {
+    &__subItem {
+      display: block;
+    }
+  }
+  @include tabletOnly {
+    background-color: yellow;
+    &__subList > :nth-child(-n + 4) {
+      display: block;
+    }
+  }
+  @include desktop {
+    &__subList > :nth-child(-n + 5) {
+      background-color: pink;
+      display: block;
+    }
+  }
+}
