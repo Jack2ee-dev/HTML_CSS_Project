@@ -12,23 +12,6 @@
     display: none;
   }
 
-  &RightArrow {
-    position: relative;
-    font-size: 16px;
-    width: em(15);
-    height: em(15);
-    &::before {
-      content: '';
-      position: absolute;
-      display: block;
-      width: em(30);
-      height: em(30);
-      background-image: url(../images/ico_comm_201125.png);
-      background-position: em(-320) em(-100);
-      // background-size: em(30) em(30);
-    }
-  }
-
   &::before {
     content: '';
     position: absolute;
@@ -44,9 +27,24 @@
     background-size: 830px 230px;
   }
 
+  &MoveTop {
+    width: em(44);
+    height: em(44);
+    &::before {
+      background-position: em(-350) em(-30);
+    }
+  }
+  &RightArrow {
+    width: em(15);
+    height: em(15);
+    &::before {
+      background-position: em(-220) em(-40);
+    }
+  }
+
   // 검색 ------------------------------------------------------------------------ /
-  &Search{
-    &::before{
+  &Search {
+    &::before {
       background-position: em(-260) em(-30);
     }
   }
@@ -61,14 +59,14 @@
     text-align: center;
     padding: em(10);
     display: inline-blocks;
-    &::before{
+    &::before {
       content: '×';
     }
   }
 
   // 햄버거 -------------------------------------------------------------------- /
-  &Sidemenu{
-    &::before{
+  &Sidemenu {
+    &::before {
       background-position: em(-210) em(-30);
     }
   }
@@ -91,37 +89,36 @@
   }
 
   // 구매내역 -------------------------------------------------------------------- /
-  &Purchase{
-    &::before{
+  &Purchase {
+    &::before {
       background-position: em(-210) em(-60);
     }
   }
 
   // 선물함 -------------------------------------------------------------------- /
   &Present {
-    &::before{
+    &::before {
       background-position: em(-240) em(-60);
     }
   }
 
   // 쿠폰함 -------------------------------------------------------------------- /
-  &Coupon{
-    &::before{
+  &Coupon {
+    &::before {
       background-position: em(-270) em(-60);
-
     }
   }
 
   // 좋아요 -------------------------------------------------------------------- /
   &Like {
-    &::before{
+    &::before {
       background-position: em(-300) em(-60);
     }
   }
 
   // 오류 및 경고 상태 -------------------------------------------------------------------- /
   &Login {
-    &::before{
+    &::before {
       background-position: em(-290) em(-40);
     }
   }
