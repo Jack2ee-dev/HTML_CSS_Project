@@ -3,18 +3,16 @@ const drawerCloseButton = document.querySelector(".drawer__closeButton");
 const headerDrawer = document.querySelector(".header__drawer");
 const backdrop = document.querySelector(".backdrop");
 
+const controlledComponent = [upperOpenButton, drawerCloseButton, backdrop];
 
-upperOpenButton.addEventListener("click", () => {
-  toggleHeaderDrawer();
-  toggleBackdropOpen();
+controlledComponent.map((component) => {
+  component.addEventListener("click", () => {
+    toggleDrawer();
+    toggleBackdropOpen();
+  })
 })
 
-drawerCloseButton.addEventListener("click", () => {
-  toggleHeaderDrawer();
-  toggleBackdropOpen();
-})
-
-function toggleHeaderDrawer() {
+function toggleDrawer() {
   const headerDrawerClassList = headerDrawer.classList;
   if (headerDrawerClassList.contains("header__drawer")) {
     headerDrawerClassList.toggle("header__drawer--open");
