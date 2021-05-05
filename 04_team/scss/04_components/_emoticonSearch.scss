@@ -8,7 +8,6 @@
 
   &__form {
     @include flexbox($justify-content: center);
-
     padding: em(15) 0;
 
     @include desktop {
@@ -29,9 +28,17 @@
     width: 100%;
     border: none;
     padding: em(13) em(24) em(13) em(20);
-    font-size: 18px;
+    font-size: 16px;
     line-height: em(20);
     font-weight: 400;
+
+    @include tabletOnly {
+        font-size: 18px;
+    }
+
+    @include desktop {
+        font-size: 18px;
+    }
   }
 
   &__submitButton,
