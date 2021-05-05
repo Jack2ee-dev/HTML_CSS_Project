@@ -1,5 +1,9 @@
 .header {
-  position: sticky;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
   @at-root .upper {
     padding: 0 em(8);
     @include flexbox();
@@ -18,8 +22,6 @@
     @include flexbox($justify-content: center, $align-items: center);
     flex: 1 1 0;
     height: em(50);
-    background: $white;
-    z-index: -2;
   }
 
   @at-root .logo__img {
@@ -33,38 +35,36 @@
   }
 
   &__drawer {
-    position: absolute;
-    background: $white;
-    top: 0;
-    left: 0;
-    width: em(290);
-    height: 100vh;
-    padding-top: em(18);
     display: none;
-
-    @at-root .isOpen {
+    &--open {
       display: block;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+  }
 
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 100vw;
-        height: 100vh;
-        background: $black;
-        opacity: 0.3;
-        z-index: -1;
-      }
+  @at-root .drawer {
+    &__inner {
+      z-index: 1;
+      background: $white;
+      width: em(290);
+      height: 100%;
+      padding-top: em(25);
+      position: relative;
+    }
+    &__closeButton {
+      position: absolute;
+      top: em(15, 16);
+      right: em(15, 16);
     }
   }
 
   @at-root .membership {
     @include flexbox($direction: column);
-    border-bottom: em(1) solid $borderGray2;
-
     &__info {
       padding: em(12) em(20);
       font-size: em(18);
@@ -116,14 +116,16 @@
 
   &__companyInfo {
     @include flexbox($justify-content: space-between, $align-items: center);
-    margin-top: 100%;
+    width: 100%;
     padding: em(9) em(10);
     position: absolute;
     left: 0;
     bottom: 0;
+    border-top: em(1) solid $borderGray2;
 
     @at-root .kakao__link {
       font-size: 12px;
+      color: $fontGray;
     }
   }
 }

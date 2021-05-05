@@ -1,0 +1,12 @@
+.homeBanner {
+  
+  &__link {
+    @include flexbox($justify-content: center);
+    width: 100%;
+    background: $backgroundPeach;
+  }
+  &__img {
+    max-width: em(754, 16);
+    width: 100%;
+    }
+}
