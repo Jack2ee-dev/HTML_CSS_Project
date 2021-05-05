@@ -23,7 +23,6 @@
     bottom: 0;
     background-image: url(../images/ico_comm_201125.png);
     background-repeat: no-repeat;
-    background-position: 50% 50%;
     background-size: 830px 230px;
   }
 
@@ -34,6 +33,7 @@
       background-position: em(-350) em(-30);
     }
   }
+
   &RightArrow {
     width: em(15);
     height: em(15);
@@ -42,14 +42,34 @@
     }
   }
 
+  // 일반 로고 ------------------------------------------------------------------ /
   &Logo {
-    width: em(190);
-    height: em(24);
+    width: em(140);
+    height: em(20);
+
+    @include tabletOnly {
+      width: em(190);
+      height: em(24);
+    }
+
+    @include desktop {
+      width: em(190);
+      height: em(24);
+    }
     &::before {
-      background-position: em(-210) em(-2);
+      background-position: em(-210) em(-90);
+
+      @include tabletOnly {
+        background-position: em(-210) em(-2);
+      }
+
+      @include desktop {
+        background-position: em(-210) em(-2);
+      }
     }
   }
 
+  // 작은 로고 -------------------------------------------------------------------- /
   &LogoSmall {
     width: em(140);
     height: em(20);

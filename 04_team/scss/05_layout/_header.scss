@@ -57,6 +57,7 @@
   @at-root .membership {
     @include flexbox($direction: column);
     &__info {
+      @include flexbox($direction: row, $align-items: center);
       padding: em(12) em(20);
       font-size: em(18);
       font-weight: 700;
