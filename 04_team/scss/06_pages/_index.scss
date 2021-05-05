@@ -1,0 +1,13 @@
+@include mobile {
+  .articleHeading {
+    font-size: rem(18px);
+    font-weight: 700;
+  }
+}
+
+@include desktop {
+  .articleHeading {
+    font-size: rem(24px);
+    font-weight: 700;
+  }
+}
