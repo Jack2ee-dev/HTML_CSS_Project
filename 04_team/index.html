@@ -10,9 +10,8 @@
 </head>
 
 <body>
-  <div class="backdrop"></div>
   <!-- 페이지마다 다른 레이아웃을 둘 때, div로 묶어서 사용 -->
-  <div class="kakakoEmoticon">
+  <div class="kakaoEmoticon">
     <header class="header">
       <!-- 햄버기 ~ 로그인 -->
       <div class="upper">
@@ -85,17 +84,17 @@
             aria-label="주식회사 카카오">@ kakao Corp</a>
         </div>
 
-        <button class="buttonNone">
+        <button aria-label="사이드메뉴 닫기" class="buttonNone drawer__closeButton">
           <span class="icon iconClose"></span>
         </button>
       </div>
     </header>
 
-    <aside class="asideAds" aria-label="어떤 aside 인지 구분을 위해">
+    <aside class="asideAds" aria-label="카카오 이모티콘 플러스 배너">
       <h2>
-        <a class="asideAds__link">
-          이게 다 무료라고? 이모티콘 플러스<span class="icon adsIcon"></span></a>
-      </h2>
+        <a href="https://e.kakao.com/plus_info?t_ch=webstore&t_obj=web_main_banner" target="_blank" class="asideAds__link" aria-label="카카오 이모티콘 플러스 배너 이미지 및 링크 이동">
+          <img src="./images/banner/kakao_emoticon_banner.jpeg" alt="이모티콘 플러스 배너 이미지" class="asideAds__img"></a>
+      </h2>s
       <!-- <button class="button closeButton"></button> -->
     </aside>
 

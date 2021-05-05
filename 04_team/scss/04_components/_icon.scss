@@ -53,16 +53,9 @@
 
   // 닫기 ------------------------------------------------------------------------ /
   &Close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: em(20);
-    height: em(20);
-    text-align: center;
-    padding: em(10);
-    display: inline-blocks;
-    &::before{
-      content: '×';
+    &::before {
+      @include flexbox($justify-content: center);
+      background-position: em(-390) em(-89);
     }
   }
 
