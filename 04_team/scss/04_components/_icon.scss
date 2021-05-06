@@ -151,4 +151,22 @@
       background-position: em(-290) em(-40);
     }
   }
+
+  // 신규 이모티콘, 인기 이모티콘, 스타일 옆 오른쪽 화살표
+  &--rightArrow {
+    @include mobile {
+      width: em(15);
+      height: em(15);
+      &::before {
+        background-position: em(-250) em(-35);
+      }
+    }
+    @include desktop {
+      width: em(15);
+      height: em(15);
+      &::before {
+        background-position: em(-220) em(-40);
+      }
+    }
+  }
 }

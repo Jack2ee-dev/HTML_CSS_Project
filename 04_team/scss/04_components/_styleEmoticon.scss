@@ -1,0 +1,121 @@
+.stylishEmoticon {
+  background-color: $primaryGray3;
+  padding: em(30) 0 em(20) em(10);
+  max-width: em(1024);
+  @include autoMargin;
+
+  &__subList {
+    @include flexbox($flex-wrap: nowrap);
+  }
+  &__subItem {
+    display: none;
+  }
+
+  .hashTag--big {
+    font-size: rem(20px);
+    font-weight: 700;
+  }
+  .hashTag--small {
+    display: inline-block;
+    background-color: $SecondaryOrange;
+    color: #fff;
+    font-size: rem(13px);
+    font-weight: 700;
+    padding: 5px 3px;
+    border-radius: 15px;
+  }
+
+  .hashTag--big.hashTag--mint {
+    @include hashTagColor($c: $SecondaryMint);
+  }
+  .hashTag--small.hashTag--mint {
+    @include hashTagColor($bgc: $SecondaryMint);
+  }
+  .hashTag--big.hashTag--kakaoYellow {
+    @include hashTagColor($c: $SecondaryKakaoYellow);
+  }
+  .hashTag--small.hashTag--kakaoYellow {
+    @include hashTagColor($bgc: $SecondaryKakaoYellow);
+  }
+  .hashTag--big.hashTag--skyblue {
+    @include hashTagColor($c: $SecondarySkyblue);
+  }
+  .hashTag--small.hashTag--skyblue {
+    @include hashTagColor($bgc: $SecondarySkyblue);
+  }
+
+  @include mobile {
+    &__item {
+      margin-bottom: 40px;
+      &__link {
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+    .hashTag--big {
+      display: inline-block;
+    }
+    .hashTag--small {
+      margin-left: em(5px);
+    }
+    &__subList {
+      overflow: scroll;
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+    &__subList::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera*/
+    }
+    &__subItem {
+      display: block;
+      img {
+        width: 96px;
+        height: 96px;
+      }
+    }
+  }
+
+  @include desktop {
+    &__item__link,
+    .hashTag--big {
+      display: block;
+      width: 150px;
+    }
+    .hashTag--small {
+      margin-top: 10px;
+    }
+    &__item {
+      display: flex;
+    }
+    &__subList {
+      width: 100%;
+      @include flexbox($justify-content: space-between);
+    }
+    &__subItem {
+      img {
+        width: 124px;
+        height: 124px;
+      }
+    }
+
+    &__subList > :nth-child(-n + 5) {
+      display: block;
+    }
+  }
+
+  @include tabletOnly {
+    &__subList > :nth-child(-n + 3) {
+      margin-right: 15px;
+    }
+    &__subList > :nth-child(-n + 4) {
+      display: block;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &__subList > :nth-child(5) {
+      display: none;
+    }
+  }
+}

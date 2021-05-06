@@ -1,21 +1,17 @@
 // popularEmoticon 시작
-.articleHeading > a {
-  color: red;
-}
-
 .popularEmoticon {
-  max-width: 1024px;
-  margin: 0 auto;
+  padding: em(30) 0 em(20) em(10);
+  max-width: em(1024);
+  @include autoMargin;
   &__list {
     counter-reset: number;
   }
   &__item {
     display: none;
-    margin-right: 0;
+    margin-bottom: 10px;
   }
   &__item::before {
     content: counter(number);
-    // background-color: red;
     display: block;
     position: absolute;
     font-size: 1.5rem;
@@ -30,19 +26,27 @@
 
   &__figure {
     @include flexbox($justify-content: space-between, $align-items: center);
+    padding-bottom: 10px;
     margin-left: 40px;
-    // padding: 10px 0 10px 0;
     border-bottom: 1px solid #ccc;
   }
   &__name {
     color: #181818;
+    margin: 5px 0;
+    // background-color: #fff;
+    height: 25px;
   }
   &__author {
     color: #999999;
+    font-size: 0.8rem;
   }
   &__img {
     width: 76px;
     height: 76px;
+  }
+
+  .popularEmoticon__img__hover {
+    display: none;
   }
   @include mobile {
     &__list > :nth-child(-n + 5) {
@@ -67,24 +71,28 @@
       //   $colum_num: 2,
       //   $list_height: 107px
       // );
-      background-color: green;
-    }
-    &__item {
-    }
-    &__list > :nth-child(-n + 5) {
-      background-color: pink;
-    }
-    &__list > :nth-child(n + 6) {
-      background-color: coral;
+      // background-color: green;
     }
     &__item {
       display: block;
-      margin: 10px;
+      width: 45%;
       counter-increment: number;
       position: relative;
       a {
         display: block;
-        padding: 5px 3px;
+      }
+    }
+    &__item:hover {
+      .popularEmoticon__name {
+        box-sizing: border-box;
+        border-bottom: 1px solid #181818;
+        font-weight: 700;
+      }
+      .popularEmoticon__img {
+        display: none;
+      }
+      .popularEmoticon__img__hover {
+        display: block;
       }
     }
   }
