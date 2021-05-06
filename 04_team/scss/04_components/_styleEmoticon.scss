@@ -1,9 +1,10 @@
 .stylishEmoticon {
   background-color: $primaryGray3;
-  padding: em(30) 0 em(20) em(10);
-  max-width: em(1024);
-  @include autoMargin;
-
+  &__wrapper {
+    padding: em(30) 0 em(20) em(10);
+    max-width: em(1024);
+    @include autoMargin;
+  }
   &__subList {
     @include flexbox($flex-wrap: nowrap);
   }

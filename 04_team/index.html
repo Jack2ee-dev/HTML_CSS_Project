@@ -1,95 +1,144 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>카카오 이모티콘 샵</title>
+    <meta property="og:title" content="카카오 이모티콘샵" />
+    <meta property="og:url" content="https://e.kakao.com" />
+    <meta
+      property="og:image"
+      content="https://mk.kakaocdn.net/dn/emoticon/static/images/webstore/og_tag_20201125.png"
+    />
+    <meta property="og:image:width" content="1440" />
+    <meta property="og:image:height" content="720" />
+    <meta
+      property="og:description"
+      content="지금 핫한 인기 이모티콘부터 새로나온 신규 이모티콘까지! 언제나, 무엇이나, 누구나 할인받는 공간!"
+    />
+    <meta name="application-name" content="카카오 이모티콘 샵 클론 코딩" />
+    <meta
+      name="description"
+      content="웹 접근성과 표준을 준수한 카카오 이모티콘 샵 예제"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="카카오 이모티콘샵" />
+    <meta name="twitter:url" content="https://e.kakao.com" />
+    <meta
+      name="twitter:image"
+      content="https://mk.kakaocdn.net/dn/emoticon/static/images/webstore/og_tag_20201125.png"
+    />
+    <meta
+      name="twitter:description"
+      content="지금 핫한 인기 이모티콘부터 새로나온 신규 이모티콘까지! 언제나, 무엇이나, 누구나 할인받는 공간!"
+    />
+    <link rel="icon" type="image/x-icon" href="./images/ico/ico_16x16.ico" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./images/ico/ico_16x16.ico"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./images/ico/ico_32x32.ico"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./images/ico/ico_64x64.ico"
+      sizes="64x64"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./images/ico/ico_android_96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./images/ico/ico_android_144x144.png"
+      sizes="144x144"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      href="./images/ico/ico_ios_120x120.png"
+      sizes="120x120"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      href="./images/ico/ico_ios_152x152.png"
+      sizes="152x152"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <title>카카오 이모티콘 샵</title>
-  <meta property="og:title" content="카카오 이모티콘샵" />
-  <meta property="og:url" content="https://e.kakao.com" />
-  <meta property="og:image" content="https://mk.kakaocdn.net/dn/emoticon/static/images/webstore/og_tag_20201125.png" />
-  <meta property="og:image:width" content="1440" />
-  <meta property="og:image:height" content="720" />
-  <meta property="og:description" content="지금 핫한 인기 이모티콘부터 새로나온 신규 이모티콘까지! 언제나, 무엇이나, 누구나 할인받는 공간!" />
-  <meta name="application-name" content="카카오 이모티콘 샵 클론 코딩" />
-  <meta name="description" content="웹 접근성과 표준을 준수한 카카오 이모티콘 샵 예제" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="카카오 이모티콘샵" />
-  <meta name="twitter:url" content="https://e.kakao.com" />
-  <meta name="twitter:image" content="https://mk.kakaocdn.net/dn/emoticon/static/images/webstore/og_tag_20201125.png" />
-  <meta name="twitter:description" content="지금 핫한 인기 이모티콘부터 새로나온 신규 이모티콘까지! 언제나, 무엇이나, 누구나 할인받는 공간!" />
-  <link rel="icon" type="image/x-icon" href="./images/ico/ico_16x16.ico" />
-  <link rel="icon" type="image/x-icon" href="./images/ico/ico_16x16.ico" sizes="16x16" />
-  <link rel="icon" type="image/x-icon" href="./images/ico/ico_32x32.ico" sizes="32x32" />
-  <link rel="icon" type="image/x-icon" href="./images/ico/ico_64x64.ico" sizes="64x64" />
-  <link rel="icon" type="image/x-icon" href="./images/ico/ico_android_96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/x-icon" href="./images/ico/ico_android_144x144.png" sizes="144x144" />
-  <link rel="apple-touch-icon" type="image/png" href="./images/ico/ico_ios_120x120.png" sizes="120x120" />
-  <link rel="apple-touch-icon" type="image/png" href="./images/ico/ico_ios_152x152.png" sizes="152x152" />
-</head>
-
-<body>
-  <!-- 페이지마다 다른 레이아웃을 둘 때, div로 묶어서 사용 -->
-  <div class="kakaoEmoticon">
-    <header class="header">
-      <!-- 햄버기 ~ 로그인 -->
-      <div class="upper">
-        <h1 class="header__logo">
-          <!-- 로고 -->
-          <!-- 카카오 이모티콘 샵 -->
-          <a href="#" aria-label="카카오 이모티콘 샵 로고">
-            <span class="icon iconLogo"></span>
-          </a>
-        </h1>
-        <button class="buttonNone upper__openButton" aria-label="사이드메뉴 열기" title="사이드메뉴 열기">
-          <span class="icon iconSidemenu"></span>
-        </button>
-        <button class="buttonNone upper__searchButton" aria-label="이모티콘 검색">
-          <span class="icon iconSearch"></span>
-        </button>
-      </div>
-
-      <section class="emoticonSearch">
-        <h2 class="a11yHidden">이모티콘 검색어 입력</h2>
-        <div class="emoticonSearch__inner">
-          <form action="#" class="emoticonSearch__form" method="POST">
-            <div class="emoticonSearch__form__inner">
-              <input id="emoticonSearchInput" type="text" name="emoticonSearchName" class="emoticonSearch__input"
-                placeholder="이모티콘을 검색해보세요!" />
-            </div>
-            <button class="buttonNone emoticonSearch__submitButton" aria-label="검색 버튼">
-              <span class="icon iconSearch"></span>
-            </button>
-          </form>
-          <button class="buttonNone emoticonSearch__closeButton" aria-label="취소 버튼">
-            검색창 닫기
-            <!-- <span class="icon iconClose"></span> -->
+  <body>
+    <!-- 페이지마다 다른 레이아웃을 둘 때, div로 묶어서 사용 -->
+    <div class="kakaoEmoticon">
+      <header class="header">
+        <!-- 햄버기 ~ 로그인 -->
+        <div class="upper">
+          <h1 class="header__logo">
+            <!-- 로고 -->
+            <!-- 카카오 이모티콘 샵 -->
+            <a href="#" aria-label="카카오 이모티콘 샵 로고">
+              <span class="icon iconLogo"></span>
+            </a>
+          </h1>
+          <button class="buttonNone upper__openButton" aria-label="사이드메뉴 열기" title="사이드메뉴 열기">
+            <span class="icon iconSidemenu"></span>
+          </button>
+          <button class="buttonNone upper__searchButton" aria-label="이모티콘 검색">
+            <span class="icon iconSearch"></span>
           </button>
         </div>
-      </section>
 
-      <!-- 홈 신규 ~ -->
-      <nav class="navigation">
-        <h2 class="a11yHidden">메인 메뉴</h2>
-        <ul class="navigation__list">
-          <li class="navigation__item is-selected">
-            <a class="navigation__link" href="#">홈</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">신규</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">인기</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">스타일</a>
-          </li>
-        </ul>
-      </nav>
+        <section class="emoticonSearch">
+          <h2 class="a11yHidden">이모티콘 검색어 입력</h2>
+          <div class="emoticonSearch__inner">
+            <form action="#" class="emoticonSearch__form" method="POST">
+              <div class="emoticonSearch__form__inner">
+                <input id="emoticonSearchInput" type="text" name="emoticonSearchName" class="emoticonSearch__input"
+                  placeholder="이모티콘을 검색해보세요!" />
+              </div>
+              <button class="buttonNone emoticonSearch__submitButton" aria-label="검색 버튼">
+                <span class="icon iconSearch"></span>
+              </button>
+            </form>
+            <button class="buttonNone emoticonSearch__closeButton" aria-label="취소 버튼">
+              검색창 닫기
+              <!-- <span class="icon iconClose"></span> -->
+            </button>
+          </div>
+        </section>
 
-      <!-- 왼쪽 사이드바 -->
+        <!-- 홈 신규 ~ -->
+        <nav class="navigation">
+          <h2 class="a11yHidden">메인 메뉴</h2>
+          <ul class="navigation__list">
+            <li class="navigation__item is-selected">
+              <a class="navigation__link" href="#">홈</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">신규</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">인기</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">스타일</a>
+            </li>
+          </ul>
+        </nav>
+        
+        <!-- 왼쪽 사이드바 -->
       <div class="header__drawer">
         <div class="backdrop"></div>
         <!-- 헤더 마크업 문제 2 시작 -->
@@ -134,33 +183,45 @@
       </div>
     </header>
 
-    <!-- <aside class="asideAds" aria-label="어떤 aside 인지 구분을 위해">
-      <h2>
-        <a class="asideAds__link">
-          이게 다 무료라고? 이모티콘 플러스<span class="icon adsIcon"></span></a>
-      </h2>
-    </aside> -->
-
     <main class="main">
       <aside class="homeBanner">
         <h2 class="a11yHidden">톡 하나도 센스있게! 이모티콘 플러스</h2>
-        <a href="https://e.kakao.com/plus_info?t_ch=webstore&t_obj=web_main_banner" target="_blank"
-          class="homeBanner__link" aria-label="카카오 이모티콘 플러스 배너 이미지 및 링크 이동">
-          <img src="./images/banner/kakao_emoticon_banner.jpeg" alt="이모티콘 플러스 배너 이미지" class="homeBanner__img">
+        <a
+          href="https://e.kakao.com/plus_info?t_ch=webstore&t_obj=web_main_banner"
+          target="_blank"
+          class="homeBanner__link"
+          aria-label="카카오 이모티콘 플러스 배너 이미지 및 링크 이동"
+        >
+          <img
+            src="./images/banner/kakao_emoticon_banner.jpeg"
+            alt="이모티콘 플러스 배너 이미지"
+            class="homeBanner__img"
+          />
         </a>
       </aside>
       <article class="newEmoticon">
         <h2 class="articleHeading">
-          <a href="#">신규 이모티콘<span class="icon iconRightArrow" aria-label="신규 이모티콘 링크"></span></a>
+          <a href="#"
+            >신규 이모티콘<span
+              class="icon iconRightArrow"
+              aria-label="신규 이모티콘 링크"
+            ></span
+          ></a>
         </h2>
         <ul class="newEmoticon__list swipeable">
           <li class="newEmoticon__item">
             <a href="" class="newEmoticon__link">
               <figure class="emoticon-vertical">
-                <img class="emoticon__img img__default" alt=""
-                  src="./images/newEmoticon/2af7f481c535cdf216aefe68d070849c617ea012db208c18f6e83b1a90a7baa7.png" />
-                <img class="emoticon__img img__hover" alt=""
-                  src="./images/newEmoticon/2af7f481c535cdf216aefe68d070849cf43ad912ad8dd55b04db6a64cddaf76d.gif" />
+                <img
+                  class="emoticon__img img__default"
+                  alt=""
+                  src="./images/newEmoticon/2af7f481c535cdf216aefe68d070849c617ea012db208c18f6e83b1a90a7baa7.png"
+                />
+                <img
+                  class="emoticon__img img__hover"
+                  alt=""
+                  src="./images/newEmoticon/2af7f481c535cdf216aefe68d070849cf43ad912ad8dd55b04db6a64cddaf76d.gif"
+                />
                 <figcaption class="emoticon__name">
                   나비는 내 친구야
                 </figcaption>
@@ -170,10 +231,16 @@
           <li class="newEmoticon__item">
             <a href="" class="newEmoticon__link">
               <figure class="emoticon-vertical">
-                <img class="emoticon__img img__default" alt=""
-                  src="./images/newEmoticon/2b2b802fd40b38f5d71670b282d388f0617ea012db208c18f6e83b1a90a7baa7.png" />
-                <img class="emoticon__img img__hover" alt=""
-                  src="./images/newEmoticon/2b2b802fd40b38f5d71670b282d388f0f43ad912ad8dd55b04db6a64cddaf76d.gif" />
+                <img
+                  class="emoticon__img img__default"
+                  alt=""
+                  src="./images/newEmoticon/2b2b802fd40b38f5d71670b282d388f0617ea012db208c18f6e83b1a90a7baa7.png"
+                />
+                <img
+                  class="emoticon__img img__hover"
+                  alt=""
+                  src="./images/newEmoticon/2b2b802fd40b38f5d71670b282d388f0f43ad912ad8dd55b04db6a64cddaf76d.gif"
+                />
                 <figcaption class="emoticon__name">쪼꼬미 쪼미</figcaption>
               </figure>
             </a>
@@ -181,10 +248,16 @@
           <li class="newEmoticon__item">
             <a href="" class="newEmoticon__link">
               <figure class="emoticon-vertical">
-                <img class="emoticon__img img__default" alt=""
-                  src="./images/newEmoticon/010a601c6f13172071b00699e1a525c0617ea012db208c18f6e83b1a90a7baa7.png" />
-                <img class="emoticon__img img__hover" alt=""
-                  src="./images/newEmoticon/010a601c6f13172071b00699e1a525c0f43ad912ad8dd55b04db6a64cddaf76d.gif" />
+                <img
+                  class="emoticon__img img__default"
+                  alt=""
+                  src="./images/newEmoticon/010a601c6f13172071b00699e1a525c0617ea012db208c18f6e83b1a90a7baa7.png"
+                />
+                <img
+                  class="emoticon__img img__hover"
+                  alt=""
+                  src="./images/newEmoticon/010a601c6f13172071b00699e1a525c0f43ad912ad8dd55b04db6a64cddaf76d.gif"
+                />
                 <figcaption class="emoticon__name">
                   날 소중히 해줘 펌베어
                 </figcaption>
@@ -194,10 +267,16 @@
           <li class="newEmoticon__item">
             <a href="" class="newEmoticon__link">
               <figure class="emoticon-vertical">
-                <img class="emoticon__img img__default" alt=""
-                  src="./images/newEmoticon/48a57695499349cbd6bcec1eaef93dcb617ea012db208c18f6e83b1a90a7baa7.png" />
-                <img class="emoticon__img img__hover" alt=""
-                  src="./images/newEmoticon/48a57695499349cbd6bcec1eaef93dcbf43ad912ad8dd55b04db6a64cddaf76d.gif" />
+                <img
+                  class="emoticon__img img__default"
+                  alt=""
+                  src="./images/newEmoticon/48a57695499349cbd6bcec1eaef93dcb617ea012db208c18f6e83b1a90a7baa7.png"
+                />
+                <img
+                  class="emoticon__img img__hover"
+                  alt=""
+                  src="./images/newEmoticon/48a57695499349cbd6bcec1eaef93dcbf43ad912ad8dd55b04db6a64cddaf76d.gif"
+                />
                 <figcaption class="emoticon__name">
                   오바좀 그만해 햄슥아
                 </figcaption>
@@ -207,10 +286,16 @@
           <li class="newEmoticon__item">
             <a href="" class="newEmoticon__link">
               <figure class="emoticon-vertical">
-                <img class="emoticon__img img__default" alt=""
-                  src="./images/newEmoticon/56a511ded0a1289d167ad6a441854bff617ea012db208c18f6e83b1a90a7baa7.png" />
-                <img class="emoticon__img img__hover" alt=""
-                  src="./images/newEmoticon/56a511ded0a1289d167ad6a441854bfff43ad912ad8dd55b04db6a64cddaf76d.gif" />
+                <img
+                  class="emoticon__img img__default"
+                  alt=""
+                  src="./images/newEmoticon/56a511ded0a1289d167ad6a441854bff617ea012db208c18f6e83b1a90a7baa7.png"
+                />
+                <img
+                  class="emoticon__img img__hover"
+                  alt=""
+                  src="./images/newEmoticon/56a511ded0a1289d167ad6a441854bfff43ad912ad8dd55b04db6a64cddaf76d.gif"
+                />
                 <figcaption class="emoticon__name">
                   동팔이와 두칠이
                 </figcaption>
@@ -220,10 +305,16 @@
           <li class="newEmoticon__item">
             <a href="" class="newEmoticon__link">
               <figure class="emoticon-vertical">
-                <img class="emoticon__img img__default" alt=""
-                  src="./images/newEmoticon/211cb65c3cc09bf3c7d16ebbbe6fe7fa617ea012db208c18f6e83b1a90a7baa7.png" />
-                <img class="emoticon__img img__hover" alt=""
-                  src="./images/newEmoticon/211cb65c3cc09bf3c7d16ebbbe6fe7faf43ad912ad8dd55b04db6a64cddaf76d.gif" />
+                <img
+                  class="emoticon__img img__default"
+                  alt=""
+                  src="./images/newEmoticon/211cb65c3cc09bf3c7d16ebbbe6fe7fa617ea012db208c18f6e83b1a90a7baa7.png"
+                />
+                <img
+                  class="emoticon__img img__hover"
+                  alt=""
+                  src="./images/newEmoticon/211cb65c3cc09bf3c7d16ebbbe6fe7faf43ad912ad8dd55b04db6a64cddaf76d.gif"
+                />
                 <figcaption class="emoticon__name">
                   귀염뽀짝 애기뚱냥 4
                 </figcaption>
@@ -233,10 +324,16 @@
           <li class="newEmoticon__item">
             <a href="" class="newEmoticon__link">
               <figure class="emoticon-vertical">
-                <img class="emoticon__img img__default" alt=""
-                  src="./images/newEmoticon/663e4c760f7e7931c9434636caacecd4617ea012db208c18f6e83b1a90a7baa7.png" />
-                <img class="emoticon__img img__hover" alt=""
-                  src="./images/newEmoticon/663e4c760f7e7931c9434636caacecd4f43ad912ad8dd55b04db6a64cddaf76d.gif" />
+                <img
+                  class="emoticon__img img__default"
+                  alt=""
+                  src="./images/newEmoticon/663e4c760f7e7931c9434636caacecd4617ea012db208c18f6e83b1a90a7baa7.png"
+                />
+                <img
+                  class="emoticon__img img__hover"
+                  alt=""
+                  src="./images/newEmoticon/663e4c760f7e7931c9434636caacecd4f43ad912ad8dd55b04db6a64cddaf76d.gif"
+                />
                 <figcaption class="emoticon__name">
                   풉키풉키! 얄밉쮸?
                 </figcaption>
@@ -246,10 +343,16 @@
           <li class="newEmoticon__item">
             <a href="" class="newEmoticon__link">
               <figure class="emoticon-vertical">
-                <img class="emoticon__img img__default" alt=""
-                  src="./images/newEmoticon/728b5c9b654bef23bef28cff9859ae98617ea012db208c18f6e83b1a90a7baa7.png" />
-                <img class="emoticon__img img__hover" alt=""
-                  src="./images/newEmoticon/728b5c9b654bef23bef28cff9859ae98f43ad912ad8dd55b04db6a64cddaf76d.gif" />
+                <img
+                  class="emoticon__img img__default"
+                  alt=""
+                  src="./images/newEmoticon/728b5c9b654bef23bef28cff9859ae98617ea012db208c18f6e83b1a90a7baa7.png"
+                />
+                <img
+                  class="emoticon__img img__hover"
+                  alt=""
+                  src="./images/newEmoticon/728b5c9b654bef23bef28cff9859ae98f43ad912ad8dd55b04db6a64cddaf76d.gif"
+                />
                 <figcaption class="emoticon__name">
                   예쁜 말만 줄게요 2
                 </figcaption>
@@ -259,10 +362,16 @@
           <li class="newEmoticon__item">
             <a href="" class="newEmoticon__link">
               <figure class="emoticon-vertical">
-                <img class="emoticon__img img__default" alt=""
-                  src="./images/newEmoticon/ab4641e06850226d4bf4e3858a7582b8617ea012db208c18f6e83b1a90a7baa7.png" />
-                <img class="emoticon__img img__hover" alt=""
-                  src="./images/newEmoticon/ab4641e06850226d4bf4e3858a7582b8f43ad912ad8dd55b04db6a64cddaf76d.gif" />
+                <img
+                  class="emoticon__img img__default"
+                  alt=""
+                  src="./images/newEmoticon/ab4641e06850226d4bf4e3858a7582b8617ea012db208c18f6e83b1a90a7baa7.png"
+                />
+                <img
+                  class="emoticon__img img__hover"
+                  alt=""
+                  src="./images/newEmoticon/ab4641e06850226d4bf4e3858a7582b8f43ad912ad8dd55b04db6a64cddaf76d.gif"
+                />
                 <figcaption class="emoticon__name">입체티콘</figcaption>
               </figure>
             </a>
@@ -270,10 +379,16 @@
           <li class="newEmoticon__item">
             <a href="" class="newEmoticon__link">
               <figure class="emoticon-vertical">
-                <img class="emoticon__img img__default" alt=""
-                  src="./images/newEmoticon/d6229cf93f63b041a134844de75f6837617ea012db208c18f6e83b1a90a7baa7.png" />
-                <img class="emoticon__img img__hover" alt=""
-                  src="./images/newEmoticon/d6229cf93f63b041a134844de75f68377154249a3890514a43687a85e6b6cc82.png" />
+                <img
+                  class="emoticon__img img__default"
+                  alt=""
+                  src="./images/newEmoticon/d6229cf93f63b041a134844de75f6837617ea012db208c18f6e83b1a90a7baa7.png"
+                />
+                <img
+                  class="emoticon__img img__hover"
+                  alt=""
+                  src="./images/newEmoticon/d6229cf93f63b041a134844de75f68377154249a3890514a43687a85e6b6cc82.png"
+                />
                 <figcaption class="emoticon__name">
                   메롱뱀은 메에~롱!
                 </figcaption>
@@ -295,10 +410,44 @@
                   <h3 class="popularEmoticon__name">모죠티콘</h3>
                   <p class="popularEmoticon__author">모죠</p>
                 </figcaption>
-                <img class="popularEmoticon__img" alt="모죠티콘 썸네일"
-                  src="./images/popularEmoticon/mozoticon_thumbnail.png" />
-                <img class="popularEmoticon__img popularEmoticon__img__hover" alt="모죠티콘 썸네일"
-                  src="./images/popularEmoticon/mozoticon_hover.gif" />
+                <picture class="popularEmoticon__img">
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./images/popularEmoticon/optimization/mozoticon_thumbnail.webp
+                    "
+                  />
+                  <source
+                    type="image/png"
+                    srcset="./images/popularEmoticon/mozoticon_thumbnail.png"
+                  />
+                  <img
+                    class="popularEmoticon__img"
+                    alt="모죠티콘 썸네일"
+                    src="./images/popularEmoticon/mozoticon_thumbnail.png"
+                  />
+                </picture>
+                <video
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  class="popularEmoticon__img popularEmoticon__img__hover"
+                >
+                  <source
+                    type="video/mp4"
+                    src="./images/popularEmoticon/optimization/mozoticon_hover.mp4"
+                  />
+                  <source
+                    type="image/gif"
+                    src="./images/popularEmoticon/mozoticon_hover.gif"
+                  />
+                  <img
+                    class="popularEmoticon__img popularEmoticon__img__hover"
+                    alt="모죠티콘 썸네일"
+                    src="./images/popularEmoticon/mozoticon_hover.gif"
+                  />
+                </video>
               </figure>
             </a>
           </li>
@@ -309,10 +458,46 @@
                   <h3 class="popularEmoticon__name">뽀시래기 짱큰콩</h3>
                   <p class="popularEmoticon__author">실버벨</p>
                 </figcaption>
-                <img class="popularEmoticon__img" alt="뽀시래기 짱큰콩 썸네일"
-                  src="./images/popularEmoticon/tiny-big-bean_thumbnail.png" />
-                <img class="popularEmoticon__img popularEmoticon__img__hover" alt="뽀시래기 짱큰콩 썸네일"
-                  src="./images/popularEmoticon/tiny-big-bean_hover.gif" />
+                <picture class="popularEmoticon__img">
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./images/popularEmoticon/optimization/tiny-big-bean_thumbnail.webp
+                    "
+                  />
+                  <source
+                    type="image/png"
+                    srcset="
+                      ./images/popularEmoticon/tiny-big-bean_thumbnail.png
+                    "
+                  />
+                  <img
+                    class="popularEmoticon__img"
+                    alt="뽀시래기 짱큰콩 썸네일"
+                    src="./images/popularEmoticon/tiny-big-bean_thumbnail.png"
+                  />
+                </picture>
+                <video
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  class="popularEmoticon__img popularEmoticon__img__hover"
+                >
+                  <source
+                    type="video/mp4"
+                    src="./images/popularEmoticon/optimization/tiny-big-bean_hover.mp4"
+                  />
+                  <source
+                    type="image/gif"
+                    src="./images/popularEmoticon/tiny-big-bean_hover.gif"
+                  />
+                  <img
+                    class="popularEmoticon__img popularEmoticon__img__hover"
+                    alt="뽀시래기 짱큰콩 움직이는 썸네일"
+                    src="./images/popularEmoticon/tiny-big-bean_hover.gif"
+                  />
+                </video>
               </figure>
             </a>
           </li>
@@ -323,10 +508,46 @@
                   <h3 class="popularEmoticon__name">춘식이는 집순이</h3>
                   <p class="popularEmoticon__author">카카오프렌즈</p>
                 </figcaption>
-                <img class="popularEmoticon__img" alt="춘식이는 집순이 썸네일"
-                  src="./images/popularEmoticon/choonsik-is-a-homebody__thumbnail.png" />
-                <img class="popularEmoticon__img popularEmoticon__img__hover" alt="춘식이는 집순이 썸네일"
-                  src="./images/popularEmoticon/choonsik-is-a-homebody__hover.gif" />
+                <picture class="popularEmoticon__img">
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./images/popularEmoticon/optimization/choonsik-is-a-homebody__thumbnail.webp
+                    "
+                  />
+                  <source
+                    type="image/png"
+                    srcset="
+                      ./images/popularEmoticon/choonsik-is-a-homebody__thumbnail.png
+                    "
+                  />
+                  <img
+                    class="popularEmoticon__img"
+                    alt="춘식이는 집순이 썸네일"
+                    src="./images/popularEmoticon/choonsik-is-a-homebody__thumbnail.png"
+                  />
+                </picture>
+                <video
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  class="popularEmoticon__img popularEmoticon__img__hover"
+                >
+                  <source
+                    type="video/mp4"
+                    src="./images/popularEmoticon/optimization/choonsik-is-a-homebody__hover.mp4"
+                  />
+                  <source
+                    type="image/gif"
+                    src="./images/popularEmoticon/choonsik-is-a-homebody__hover.gif"
+                  />
+                  <img
+                    class="popularEmoticon__img popularEmoticon__img__hover"
+                    alt="춘식이는 집순이 움직이는 썸네일"
+                    src="./images/popularEmoticon/choonsik-is-a-homebody__hover.gif"
+                  />
+                </video>
               </figure>
             </a>
           </li>
@@ -339,10 +560,46 @@
                   </h3>
                   <p class="popularEmoticon__author">MOH Inc.</p>
                 </figcaption>
-                <img class="popularEmoticon__img" alt="오늘의 짤 짤루랄라 짤즈4 썸네일"
-                  src="./images/popularEmoticon/todays-meme-tralala-zzals-ver4_thumbnail.png" />
-                <img class="popularEmoticon__img popularEmoticon__img__hover" alt="오늘의 짤 짤루랄라 짤즈4 썸네일"
-                  src="./images/popularEmoticon/todays-meme-tralala-zzals-ver4_hover.gif" />
+                <picture class="popularEmoticon__img">
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./images/popularEmoticon/optimization/todays-meme-tralala-zzals-ver4_thumbnail.webp
+                    "
+                  />
+                  <source
+                    type="image/png"
+                    srcset="
+                      ./images/popularEmoticon/todays-meme-tralala-zzals-ver4_thumbnail.png
+                    "
+                  />
+                  <img
+                    class="popularEmoticon__img"
+                    alt="오늘의 짤 &#35;짤루랄라 짤즈4 썸네일"
+                    src="./images/popularEmoticon/todays-meme-tralala-zzals-ver4_thumbnail.png"
+                  />
+                </picture>
+                <video
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  class="popularEmoticon__img popularEmoticon__img__hover"
+                >
+                  <source
+                    type="video/mp4"
+                    src="./images/popularEmoticon/optimization/todays-meme-tralala-zzals-ver4_hover.mp4"
+                  />
+                  <source
+                    type="image/gif"
+                    src="./images/popularEmoticon/todays-meme-tralala-zzals-ver4_hover.gif"
+                  />
+                  <img
+                    class="popularEmoticon__img popularEmoticon__img__hover"
+                    alt="오늘의 짤 &#35;짤루랄라 짤즈4 움직이는 썸네일"
+                    src="./images/popularEmoticon/todays-meme-tralala-zzals-ver4_hover.gif"
+                  />
+                </video>
               </figure>
             </a>
           </li>
@@ -353,10 +610,46 @@
                   <h3 class="popularEmoticon__name">잔망 루피</h3>
                   <p class="popularEmoticon__author">뽀로로</p>
                 </figcaption>
-                <img class="popularEmoticon__img" alt="잔망 루피 썸네일"
-                  src="./images/popularEmoticon/zanmang-loopy__thumbnail.png" />
-                <img class="popularEmoticon__img popularEmoticon__img__hover" alt="잔망 루피 썸네일"
-                  src="./images/popularEmoticon/zanmang-loopy__thumbnail.png" />
+                <picture class="popularEmoticon__img">
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./images/popularEmoticon/optimization/zanmang-loopy__thumbnail.webp
+                    "
+                  />
+                  <source
+                    type="image/png"
+                    srcset="
+                      ./images/popularEmoticon/zanmang-loopy__thumbnail.png
+                    "
+                  />
+                  <img
+                    class="popularEmoticon__img"
+                    alt="잔망 루피 썸네일"
+                    src="./images/popularEmoticon/zanmang-loopy__thumbnail.png"
+                  />
+                </picture>
+                <picture
+                  class="popularEmoticon__img popularEmoticon__img__hover"
+                >
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./images/popularEmoticon/optimization/zanmang-loopy__thumbnail.webp
+                    "
+                  />
+                  <source
+                    type="image/png"
+                    srcset="
+                      ./images/popularEmoticon/zanmang-loopy__thumbnail.png
+                    "
+                  />
+                  <img
+                    class="popularEmoticon__img popularEmoticon__img__hover"
+                    alt="잔망 루피 썸네일"
+                    src="./images/popularEmoticon/zanmang-loopy__thumbnail.png"
+                  />
+                </picture>
               </figure>
             </a>
           </li>
@@ -367,10 +660,46 @@
                   <h3 class="popularEmoticon__name">망붕이 in 오피스</h3>
                   <p class="popularEmoticon__author">EB</p>
                 </figcaption>
-                <img class="popularEmoticon__img" alt="망붕이 인 오피스 썸네일"
-                  src="./images/popularEmoticon/illusion-rabbit-ver-14_thumbnail.png" />
-                <img class="popularEmoticon__img popularEmoticon__img__hover" alt="망붕이 인 오피스 썸네일"
-                  src="./images/popularEmoticon/illusion-rabbit-ver-14_hover.gif" />
+                <picture class="popularEmoticon__img">
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./images/popularEmoticon/optimization/illusion-rabbit-ver-14_thumbnail.webp
+                    "
+                  />
+                  <source
+                    type="image/png"
+                    srcset="
+                      ./images/popularEmoticon/illusion-rabbit-ver-14_thumbnail.png
+                    "
+                  />
+                  <img
+                    class="popularEmoticon__img"
+                    alt="망붕이 인 오피스 썸네일"
+                    src="./images/popularEmoticon/illusion-rabbit-ver-14_thumbnail.png"
+                  />
+                </picture>
+                <video
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  class="popularEmoticon__img popularEmoticon__img__hover"
+                >
+                  <source
+                    type="video/mp4"
+                    src="./images/popularEmoticon/optimization/illusion-rabbit-ver-14_hover.mp4"
+                  />
+                  <source
+                    type="image/gif"
+                    src="./images/popularEmoticon/illusion-rabbit-ver-14_hover.gif"
+                  />
+                  <img
+                    class="popularEmoticon__img popularEmoticon__img__hover"
+                    alt="망붕이 인 오피스 움직이는 썸네일"
+                    src="./images/popularEmoticon/illusion-rabbit-ver-14_hover.gif"
+                  />
+                </video>
               </figure>
             </a>
           </li>
@@ -383,10 +712,46 @@
                   </h3>
                   <p class="popularEmoticon__author">합쥐</p>
                 </figcaption>
-                <img class="popularEmoticon__img" alt="너랑만 놀고싶어 수달커플 썸네일"
-                  src="./images/popularEmoticon/the-otter-couple-have-each-other__thumbnail.png" />
-                <img class="popularEmoticon__img popularEmoticon__img__hover" alt="너랑만 놀고싶어 수달커플 썸네일"
-                  src="./images/popularEmoticon/the-otter-couple-have-each-other__hover.gif" />
+                <picture class="popularEmoticon__img">
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./images/popularEmoticon/optimization/the-otter-couple-have-each-other__thumbnail.webp
+                    "
+                  />
+                  <source
+                    type="image/png"
+                    srcset="
+                      ./images/popularEmoticon/the-otter-couple-have-each-other__thumbnail.png
+                    "
+                  />
+                  <img
+                    class="popularEmoticon__img"
+                    alt="너랑만 놀고싶어 수달커플 썸네일"
+                    src="./images/popularEmoticon/the-otter-couple-have-each-other__thumbnail.png"
+                  />
+                </picture>
+                <video
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  class="popularEmoticon__img popularEmoticon__img__hover"
+                >
+                  <source
+                    type="video/mp4"
+                    src="./images/popularEmoticon/optimization/the-otter-couple-have-each-other__hover.mp4"
+                  />
+                  <source
+                    type="image/gif"
+                    src="./images/popularEmoticon/the-otter-couple-have-each-other__hover.gif"
+                  />
+                  <img
+                    class="popularEmoticon__img popularEmoticon__img__hover"
+                    alt="너랑만 놀고싶어 수달커플 움직이는 썸네일"
+                    src="./images/popularEmoticon/the-otter-couple-have-each-other__hover.gif"
+                  />
+                </video>
               </figure>
             </a>
           </li>
@@ -401,10 +766,46 @@
                     <span lang="en">K</span>직장인
                   </p>
                 </figcaption>
-                <img class="popularEmoticon__img" alt="케이직장인이 매일쓰는 32톡 썸네일"
-                  src="./images/popularEmoticon/top-32-quotes-for-korean-workers_thumbnail.png" />
-                <img class="popularEmoticon__img popularEmoticon__img__hover" alt="케이직장인이 매일쓰는 32톡 썸네일"
-                  src="./images/popularEmoticon/top-32-quotes-for-korean-workers_hover.png" />
+                <picture class="popularEmoticon__img">
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./images/popularEmoticon/optimization/top-32-quotes-for-korean-workers_thumbnail.webp
+                    "
+                  />
+                  <source
+                    type="image/png"
+                    srcset="
+                      ./images/popularEmoticon/top-32-quotes-for-korean-workers_thumbnail.png
+                    "
+                  />
+                  <img
+                    class="popularEmoticon__img"
+                    alt="케이직장인이 매일쓰는 32톡 썸네일"
+                    src="./images/popularEmoticon/top-32-quotes-for-korean-workers_thumbnail.png"
+                  />
+                </picture>
+                <picture
+                  class="popularEmoticon__img popularEmoticon__img__hover"
+                >
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./images/popularEmoticon/optimization/top-32-quotes-for-korean-workers_hover.webp
+                    "
+                  />
+                  <source
+                    type="image/png"
+                    srcset="
+                      ./images/popularEmoticon/top-32-quotes-for-korean-workers_hover.png
+                    "
+                  />
+                  <img
+                    class="popularEmoticon__img popularEmoticon__img__hover"
+                    alt="케이직장인이 매일쓰는 32톡 썸네일"
+                    src="./images/popularEmoticon/top-32-quotes-for-korean-workers_hover.png"
+                  />
+                </picture>
               </figure>
             </a>
           </li>
@@ -415,10 +816,46 @@
                   <h3 class="popularEmoticon__name">뽀시래기 쟈근콩</h3>
                   <p class="popularEmoticon__author">실버벨</p>
                 </figcaption>
-                <img class="popularEmoticon__img" alt="뽀시래기 쟈근콩"
-                  src="./images/popularEmoticon/tiny-littlebean_thumbnail.png" />
-                <img class="popularEmoticon__img popularEmoticon__img__hover" alt="뽀시래기 쟈근콩"
-                  src="./images/popularEmoticon/tiny-littlebean_hover.gif" />
+                <picture class="popularEmoticon__img">
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./images/popularEmoticon/optimization/tiny-littlebean_thumbnail.webp
+                    "
+                  />
+                  <source
+                    type="image/png"
+                    srcset="
+                      ./images/popularEmoticon/tiny-littlebean_thumbnail.png
+                    "
+                  />
+                  <img
+                    class="popularEmoticon__img"
+                    alt="뽀시래기 쟈근콩 썸네일"
+                    src="./images/popularEmoticon/tiny-littlebean_thumbnail.png"
+                  />
+                </picture>
+                <video
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  class="popularEmoticon__img popularEmoticon__img__hover"
+                >
+                  <source
+                    type="video/mp4"
+                    src="./images/popularEmoticon/optimization/tiny-littlebean_hover.mp4"
+                  />
+                  <source
+                    type="image/gif"
+                    src="./images/popularEmoticon/tiny-littlebean_hover.gif"
+                  />
+                  <img
+                    class="popularEmoticon__img popularEmoticon__img__hover"
+                    alt="뽀시래기 쟈근콩 움직이는 썸네일"
+                    src="./images/popularEmoticon/tiny-littlebean_hover.gif"
+                  />
+                </video>
               </figure>
             </a>
           </li>
@@ -429,136 +866,301 @@
                   <h3 class="popularEmoticon__name">잔망 루피2</h3>
                   <p class="popularEmoticon__author">뽀로로</p>
                 </figcaption>
-                <img class="popularEmoticon__img" alt="잔망 루피 2 썸네일"
-                  src="./images/popularEmoticon/zanmang-loopy-ver-2_thumbnail.png" />
-                <img class="popularEmoticon__img popularEmoticon__img__hover" alt="잔망 루피 2 썸네일"
-                  src="./images/popularEmoticon/zanmang-loopy-ver-2_thumbnail.png" />
+                <picture class="popularEmoticon__img">
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./images/popularEmoticon/optimization/zanmang-loopy-ver-2_thumbnail.webp
+                    "
+                  />
+                  <source
+                    type="image/png"
+                    srcset="
+                      ./images/popularEmoticon/zanmang-loopy-ver-2_thumbnail.png
+                    "
+                  />
+                  <img
+                    class="popularEmoticon__img"
+                    alt="잔망 루피 2 썸네일"
+                    src="./images/popularEmoticon/zanmang-loopy-ver-2_thumbnail.png"
+                  />
+                </picture>
+                <picture
+                  class="popularEmoticon__img popularEmoticon__img__hover"
+                >
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./images/popularEmoticon/optimization/zanmang-loopy-ver-2_thumbnail.webp
+                    "
+                  />
+                  <source
+                    type="image/png"
+                    srcset="
+                      ./images/popularEmoticon/zanmang-loopy-ver-2_thumbnail.png
+                    "
+                  />
+                  <img
+                    class="popularEmoticon__img popularEmoticon__img__hover"
+                    alt="잔망 루피 2 썸네일"
+                    src="./images/popularEmoticon/zanmang-loopy-ver-2_thumbnail.png"
+                  />
+                </picture>
               </figure>
             </a>
           </li>
         </ol>
       </article>
       <article class="stylishEmoticon">
-        <h2 class="articleHeading">
-          <a href="#">스타일<span class="icon icon--rightArrow"></span></a>
-        </h2>
-        <ul class="stylishEmoticon__list">
-          <li class="stylishEmoticon__item">
-            <h3 class="stylishEmoticon__heading">
-              <a href="#" class="stylishEmoticon__item__link"><span class="hashTag--big hashTag--mint">#재밌는</span><span
-                  class="hashTag--small hashTag--mint">#길쭉길쭉한</span></a>
-            </h3>
-            <ul class="stylishEmoticon__subList swipeable">
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="./images/stylishEmoticon/passionate-sportsofty.png" /></a>
-              </li>
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="./images/stylishEmoticon/im-cat-the-reaction-cat-ver-2.png" /></a>
-              </li>
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="./images/stylishEmoticon/mr-gat-is-back.png" /></a>
-              </li>
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="./images/stylishEmoticon/mr-gu-gu-is-now-in-korea.png" /></a>
-              </li>
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="./images/stylishEmoticon/animal-rangers-friends-who-fight.png" /></a>
-              </li>
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="./images/stylishEmoticon/i-dont-know-why-i-do-these-things.png" /></a>
-              </li>
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="./images/stylishEmoticon/dancing-lala.png" /></a>
-              </li>
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="./images/stylishEmoticon/to-my-lovely-nim.png" /></a>
-              </li>
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="./images/stylishEmoticon/mim-dog.png" /></a>
-              </li>
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="./images/stylishEmoticon/fall-in-love-sister.png" /></a>
-              </li>
-            </ul>
-          </li>
-          <li class="stylishEmoticon__item">
-            <h3 class="stylishEmoticon__heading">
-              <a href="#" class="stylishEmoticon__item__link"><span class="hashTag--big hashTag--kakaoYellow">#카카오
-                  공식</span><span class="hashTag--small hashTag--kakaoYellow">#니니즈</span></a>
-            </h3>
-            <ul class="stylishEmoticon__subList swipeable">
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="images/stylishEmoticon/were-keroberony.png" /></a>
-              </li>
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="./images/stylishEmoticon/jordy-tv.png" /></a>
-              </li>
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="./images/stylishEmoticon/jordys-24hours.png" /></a>
-              </li>
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="./images/stylishEmoticon/jordyangmond-are-best-friends.png" /></a>
-              </li>
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="./images/stylishEmoticon/niniz-and-love-is-delicious.png" /></a>
-              </li>
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="./images/stylishEmoticon/niniz-and-office-life.png" /></a>
-              </li>
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="./images/stylishEmoticon/niniz-and-the-giant-guys.png" /></a>
-              </li>
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="./images/stylishEmoticon/niniz-and-the-party-guys.png" /></a>
-              </li>
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="./images/stylishEmoticon/niniz-turn-up-the-volume.png" /></a>
-              </li>
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="./images/stylishEmoticon/jordys-roller-coaster-life.png" /></a>
-              </li>
-            </ul>
-          </li>
-          <li class="stylishEmoticon__item">
-            <h3 class="stylishEmoticon__heading">
-              <a href="#" class="stylishEmoticon__item__link"><span
-                  class="hashTag--big hashTag--skyblue">#스타/인플루언서/캐릭터</span><span
-                  class="hashTag--small hashTag--skyblue">#캐릭터</span></a>
-            </h3>
-            <ul class="stylishEmoticon__subList swipeable" id="draggable">
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="images/stylishEmoticon/my-friend-nabi.png" /></a>
-              </li>
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="./images/stylishEmoticon/yeah-happy-everyday-moomin-family.png" /></a>
-              </li>
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="./images/stylishEmoticon/mojoticon.png" /></a>
-              </li>
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="./images/stylishEmoticon/bread-barbershop.png" /></a>
-              </li>
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="./images/stylishEmoticon/ttukttaks-daily-life.png" /></a>
-              </li>
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="./images/stylishEmoticon/were-bffs-miracle-twinkles.png" /></a>
-              </li>
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="./images/stylishEmoticon/huh-moomin-family-in-touchy-mood.png" /></a>
-              </li>
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="./images/stylishEmoticon/dreaming-girl-anne-of-green-gables.png" /></a>
-              </li>
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="./images/stylishEmoticon/campus-story-dad-ver.png" /></a>
-              </li>
-              <li class="stylishEmoticon__subItem">
-                <a href="#"><img alt="" src="./images/stylishEmoticon/animated-prichannel-on-air.png" /></a>
-              </li>
-            </ul>
-          </li>
-        </ul>
+        <div class="stylishEmoticon__wrapper">
+          <h2 class="articleHeading">
+            <a href="#">스타일<span class="icon icon--rightArrow"></span></a>
+          </h2>
+          <ul class="stylishEmoticon__list">
+            <li class="stylishEmoticon__item">
+              <h3 class="stylishEmoticon__heading">
+                <a href="#" class="stylishEmoticon__item__link"
+                  ><span class="hashTag--big hashTag--mint">#재밌는</span
+                  ><span class="hashTag--small hashTag--mint"
+                    >#길쭉길쭉한</span
+                  ></a
+                >
+              </h3>
+              <ul class="stylishEmoticon__subList swipeable">
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img
+                      alt=""
+                      src="./images/stylishEmoticon/passionate-sportsofty.png"
+                  /></a>
+                </li>
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img
+                      alt=""
+                      src="./images/stylishEmoticon/im-cat-the-reaction-cat-ver-2.png"
+                  /></a>
+                </li>
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img
+                      alt=""
+                      src="./images/stylishEmoticon/mr-gat-is-back.png"
+                  /></a>
+                </li>
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img
+                      alt=""
+                      src="./images/stylishEmoticon/mr-gu-gu-is-now-in-korea.png"
+                  /></a>
+                </li>
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img
+                      alt=""
+                      src="./images/stylishEmoticon/animal-rangers-friends-who-fight.png"
+                  /></a>
+                </li>
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img
+                      alt=""
+                      src="./images/stylishEmoticon/i-dont-know-why-i-do-these-things.png"
+                  /></a>
+                </li>
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img
+                      alt=""
+                      src="./images/stylishEmoticon/dancing-lala.png"
+                  /></a>
+                </li>
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img
+                      alt=""
+                      src="./images/stylishEmoticon/to-my-lovely-nim.png"
+                  /></a>
+                </li>
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img alt="" src="./images/stylishEmoticon/mim-dog.png"
+                  /></a>
+                </li>
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img
+                      alt=""
+                      src="./images/stylishEmoticon/fall-in-love-sister.png"
+                  /></a>
+                </li>
+              </ul>
+            </li>
+            <li class="stylishEmoticon__item">
+              <h3 class="stylishEmoticon__heading">
+                <a href="#" class="stylishEmoticon__item__link"
+                  ><span class="hashTag--big hashTag--kakaoYellow"
+                    >#카카오 공식</span
+                  ><span class="hashTag--small hashTag--kakaoYellow"
+                    >#니니즈</span
+                  ></a
+                >
+              </h3>
+              <ul class="stylishEmoticon__subList swipeable">
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img
+                      alt=""
+                      src="images/stylishEmoticon/were-keroberony.png"
+                  /></a>
+                </li>
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img alt="" src="./images/stylishEmoticon/jordy-tv.png"
+                  /></a>
+                </li>
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img
+                      alt=""
+                      src="./images/stylishEmoticon/jordys-24hours.png"
+                  /></a>
+                </li>
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img
+                      alt=""
+                      src="./images/stylishEmoticon/jordyangmond-are-best-friends.png"
+                  /></a>
+                </li>
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img
+                      alt=""
+                      src="./images/stylishEmoticon/niniz-and-love-is-delicious.png"
+                  /></a>
+                </li>
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img
+                      alt=""
+                      src="./images/stylishEmoticon/niniz-and-office-life.png"
+                  /></a>
+                </li>
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img
+                      alt=""
+                      src="./images/stylishEmoticon/niniz-and-the-giant-guys.png"
+                  /></a>
+                </li>
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img
+                      alt=""
+                      src="./images/stylishEmoticon/niniz-and-the-party-guys.png"
+                  /></a>
+                </li>
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img
+                      alt=""
+                      src="./images/stylishEmoticon/niniz-turn-up-the-volume.png"
+                  /></a>
+                </li>
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img
+                      alt=""
+                      src="./images/stylishEmoticon/jordys-roller-coaster-life.png"
+                  /></a>
+                </li>
+              </ul>
+            </li>
+            <li class="stylishEmoticon__item">
+              <h3 class="stylishEmoticon__heading">
+                <a href="#" class="stylishEmoticon__item__link"
+                  ><span class="hashTag--big hashTag--skyblue"
+                    >#스타/인플루언서/캐릭터</span
+                  ><span class="hashTag--small hashTag--skyblue"
+                    >#캐릭터</span
+                  ></a
+                >
+              </h3>
+              <ul class="stylishEmoticon__subList swipeable" id="draggable">
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img
+                      alt=""
+                      src="images/stylishEmoticon/my-friend-nabi.png"
+                  /></a>
+                </li>
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img
+                      alt=""
+                      src="./images/stylishEmoticon/yeah-happy-everyday-moomin-family.png"
+                  /></a>
+                </li>
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img alt="" src="./images/stylishEmoticon/mojoticon.png"
+                  /></a>
+                </li>
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img
+                      alt=""
+                      src="./images/stylishEmoticon/bread-barbershop.png"
+                  /></a>
+                </li>
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img
+                      alt=""
+                      src="./images/stylishEmoticon/ttukttaks-daily-life.png"
+                  /></a>
+                </li>
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img
+                      alt=""
+                      src="./images/stylishEmoticon/were-bffs-miracle-twinkles.png"
+                  /></a>
+                </li>
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img
+                      alt=""
+                      src="./images/stylishEmoticon/huh-moomin-family-in-touchy-mood.png"
+                  /></a>
+                </li>
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img
+                      alt=""
+                      src="./images/stylishEmoticon/dreaming-girl-anne-of-green-gables.png"
+                  /></a>
+                </li>
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img
+                      alt=""
+                      src="./images/stylishEmoticon/campus-story-dad-ver.png"
+                  /></a>
+                </li>
+                <li class="stylishEmoticon__subItem">
+                  <a href="#"
+                    ><img
+                      alt=""
+                      src="./images/stylishEmoticon/animated-prichannel-on-air.png"
+                  /></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </article>
     </main>
     <footer class="footer">
