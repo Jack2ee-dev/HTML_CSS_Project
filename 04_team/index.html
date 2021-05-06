@@ -31,7 +31,6 @@
 </head>
 
 <body>
-
   <!-- 페이지마다 다른 레이아웃을 둘 때, div로 묶어서 사용 -->
   <div class="kakaoEmoticon">
     <header class="header">
@@ -51,6 +50,26 @@
           <span class="icon iconSearch"></span>
         </button>
       </div>
+
+      <section class="emoticonSearch">
+        <h2 class="a11yHidden">이모티콘 검색어 입력</h2>
+        <div class="emoticonSearch__inner">
+          <form action="#" class="emoticonSearch__form" method="POST">
+            <div class="emoticonSearch__form__inner">
+              <input id="emoticonSearchInput" type="text" name="emoticonSearchName" class="emoticonSearch__input"
+                placeholder="이모티콘을 검색해보세요!" />
+            </div>
+            <button class="buttonNone emoticonSearch__submitButton" aria-label="검색 버튼">
+              <span class="icon iconSearch"></span>
+            </button>
+          </form>
+          <button class="buttonNone emoticonSearch__closeButton" aria-label="취소 버튼">
+            검색창 닫기
+            <!-- <span class="icon iconClose"></span> -->
+          </button>
+        </div>
+      </section>
+
       <!-- 홈 신규 ~ -->
       <nav class="navigation">
         <h2 class="a11yHidden">메인 메뉴</h2>
@@ -102,12 +121,6 @@
             </ul>
           </nav>
 
-          <div class="header__companyInfo">
-            <a href="#"><span class="logo__img"></span></a>
-            <a class="kakao__link" href="www.kakaocorp.com/" target="_blank" rel="noopener noreferrer"
-              aria-label="주식회사 카카오">@ kakao Corp</a>
-          </div>
-
           <section class="header__companyInfo">
             <a href="#"><span class="icon iconLogoSmall"></span></a>
             <a class="kakao__link" href="https://www.kakaocorp.com/" target="_blank" rel="noopener noreferrer"
@@ -119,37 +132,20 @@
           </button>
         </div>
       </div>
-      <section class="emoticonSearch">
-        <h2 class="a11yHidden">이모티콘 검색어 입력</h2>
-        <div class="backdrop"></div>
-        <form action="#" class="emoticonSearch__form" method="POST">
-          <div class="emoticonSearch__form__inner">
-            <input type="text" name="emoticonSearchName" class="emoticonSearch__input" placeholder="이모티콘을 검색해보세요!"
-              autofocus />
-          </div>
-          <button class="buttonNone emoticonSearch__submitButton" aria-label="검색 버튼">
-            <span class="icon iconSearch"></span>
-          </button>
-          <button class="buttonNone emoticonSearch__closeButton" aria-label="취소 버튼">
-            <span class="icon iconClose"></span>
-          </button>
-        </form>
-      </section>
     </header>
 
-    <aside class="asideAds" aria-label="어떤 aside 인지 구분을 위해">
+    <!-- <aside class="asideAds" aria-label="어떤 aside 인지 구분을 위해">
       <h2>
         <a class="asideAds__link">
           이게 다 무료라고? 이모티콘 플러스<span class="icon adsIcon"></span></a>
       </h2>
-      <!-- <button class="button closeButton"></button> -->
-    </aside>
+    </aside> -->
 
     <main class="main">
       <aside class="homeBanner">
         <h2 class="a11yHidden">톡 하나도 센스있게! 이모티콘 플러스</h2>
-        <a href="https://e.kakao.com/plus_info?t_ch=webstore&t_obj=web_main_banner" target="_blank" class="homeBanner__link"
-          aria-label="카카오 이모티콘 플러스 배너 이미지 및 링크 이동">
+        <a href="https://e.kakao.com/plus_info?t_ch=webstore&t_obj=web_main_banner" target="_blank"
+          class="homeBanner__link" aria-label="카카오 이모티콘 플러스 배너 이미지 및 링크 이동">
           <img src="./images/banner/kakao_emoticon_banner.jpeg" alt="이모티콘 플러스 배너 이미지" class="homeBanner__img">
         </a>
       </aside>
@@ -567,11 +563,11 @@
     </main>
     <footer class="footer">
       <ul class="privacy">
-        <li class="privacy__item"><a>이용약관</a></li>
-        <li class="privacy__item"><a>유료이용약관</a></li>
-        <li class="privacy__item"><a>개인정보처리방침</a></li>
-        <li class="privacy__item"><a>기업고객</a></li>
-        <li class="privacy__item"><a>문의하기</a></li>
+        <li class="privacy__item"><a href="#">이용약관</a></li>
+        <li class="privacy__item"><a href="#">유료이용약관</a></li>
+        <li class="privacy__item"><a href="#">개인정보처리방침</a></li>
+        <li class="privacy__item"><a href="#">기업고객</a></li>
+        <li class="privacy__item"><a href="#">문의하기</a></li>
       </ul>
       <small class="copyright">
         카카오 이모티콘샵에서 판매되는 콘텐츠의 저작권은 콘텐츠 제공자에게
@@ -602,6 +598,8 @@
     <a href="#" class="moveTop" aria-label="페이지 최상단으로 이동"><span class="icon iconMoveTop"></span></a>
   </div>
 </body>
-<script src="./js/navigation.js"></script>
-<script src="./js/search.js"></script>
+<script type="module" src="./js/navigation.js"></script>
+<script type="module" src="./js/backdrop.js"></script>
+<script type="module" src="./js/search.js"></script>
+
 </html>
