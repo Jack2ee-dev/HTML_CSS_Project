@@ -1,0 +1,54 @@
+.emoticonSearch {
+  background: $backgroundGray;
+  border-top: 1px solid $borderGray2;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+
+  &__form {
+    @include flexbox($justify-content: center);
+    padding: em(15) 0;
+
+    @include desktop {
+      padding: em(30) em(70);
+    }
+
+    @include tabletOnly {
+      padding: em(30) em(30);
+    }
+
+    &__inner {
+      max-width: em(560, 16);
+      width: 100%;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    border: none;
+    padding: em(13) em(24) em(13) em(20);
+    font-size: 16px;
+    line-height: em(20);
+    font-weight: 400;
+
+    @include tabletOnly {
+        font-size: 18px;
+    }
+
+    @include desktop {
+        font-size: 18px;
+    }
+  }
+
+  &__submitButton,
+  &__closeButton {
+    background: $white;
+    width: em(90, 16);
+    box-sizing: border-box;
+  }
+
+  &__closeButton {
+    border: 1px solid $borderGray3;
+  }
+}

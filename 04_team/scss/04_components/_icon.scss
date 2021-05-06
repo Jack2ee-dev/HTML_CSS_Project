@@ -12,23 +12,6 @@
     display: none;
   }
 
-  &RightArrow {
-    position: relative;
-    font-size: 16px;
-    width: em(15);
-    height: em(15);
-    &::before {
-      content: '';
-      position: absolute;
-      display: block;
-      width: em(30);
-      height: em(30);
-      background-image: url(../images/ico_comm_201125.png);
-      background-position: em(-320) em(-100);
-      // background-size: em(30) em(30);
-    }
-  }
-
   &::before {
     content: '';
     position: absolute;
@@ -40,8 +23,59 @@
     bottom: 0;
     background-image: url(../images/ico_comm_201125.png);
     background-repeat: no-repeat;
-    background-position: 50% 50%;
     background-size: 830px 230px;
+  }
+
+  &MoveTop {
+    width: em(44);
+    height: em(44);
+    &::before {
+      background-position: em(-350) em(-30);
+    }
+  }
+
+  &RightArrow {
+    width: em(15);
+    height: em(15);
+    &::before {
+      background-position: em(-220) em(-40);
+    }
+  }
+
+  // 일반 로고 ------------------------------------------------------------------ /
+  &Logo {
+    width: em(140);
+    height: em(20);
+
+    @include tabletOnly {
+      width: em(190);
+      height: em(24);
+    }
+
+    @include desktop {
+      width: em(190);
+      height: em(24);
+    }
+    &::before {
+      background-position: em(-210) em(-90);
+
+      @include tabletOnly {
+        background-position: em(-210) em(-2);
+      }
+
+      @include desktop {
+        background-position: em(-210) em(-2);
+      }
+    }
+  }
+
+  // 작은 로고 -------------------------------------------------------------------- /
+  &LogoSmall {
+    width: em(140);
+    height: em(20);
+    &::before {
+      background-position: em(-210) em(-90);
+    }
   }
 
   // 검색 ------------------------------------------------------------------------ /
@@ -53,16 +87,9 @@
 
   // 닫기 ------------------------------------------------------------------------ /
   &Close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: em(20);
-    height: em(20);
-    text-align: center;
-    padding: em(10);
-    display: inline-blocks;
     &::before {
-      content: '×';
+      @include flexbox($justify-content: center);
+      background-position: em(-390) em(-89);
     }
   }
 
