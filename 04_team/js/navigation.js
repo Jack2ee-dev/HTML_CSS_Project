@@ -13,23 +13,8 @@ controlledComponents.map((component) => {
 })
 
 function toggleDrawer() {
-  const headerDrawerClassList = headerDrawer.classList;
-  if (headerDrawerClassList.contains("header__drawer")) {
-    headerDrawerClassList.toggle("header__drawer--open");
-    headerDrawerClassList.remove("header__drawer");
-  } else if (headerDrawerClassList.contains("header__drawer--open")) {
-    headerDrawerClassList.toggle("header__drawer");
-    headerDrawerClassList.remove("header__drawer--open");
-  }
+  headerDrawer.classList.toggle("header__drawer--open");
 }
-
 function toggleBackdropOpen() {
-  const backdropClassList = backdrop.classList;
-  if (backdropClassList.contains("backdrop")) {
-    backdropClassList.toggle("backdrop--open");
-    backdropClassList.remove("backdrop");
-  } else if (backdropClassList.contains("backdrop--open")) {
-    backdropClassList.toggle("backdrop");
-    backdropClassList.remove("backdrop--open");
-  }
+  backdrop.classList.toggle("backdrop__drawer--open");
 }
