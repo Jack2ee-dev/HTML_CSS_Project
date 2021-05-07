@@ -41,6 +41,7 @@
     .emoticon__img {
       display: block;
       width: em(100);
+      height: em(100);
       @include autoMargin;
     }
     .img__hover {
