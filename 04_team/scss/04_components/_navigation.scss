@@ -24,7 +24,8 @@
     width: 100%;
     height: 100%;
 
-    &:hover {
+    &:hover,
+    &:focus {
         background: rgba($color: $accentKakao, $alpha: 0.8);
       }
   }
