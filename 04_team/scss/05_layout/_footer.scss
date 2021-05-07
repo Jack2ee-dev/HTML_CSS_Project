@@ -1,6 +1,6 @@
 .footer {
   min-width: em(280);
-  color: $primaryGray2;
+  color: $fontGray2;
   max-width: em(1024);
   @include autoMargin;
   @include mobile {
