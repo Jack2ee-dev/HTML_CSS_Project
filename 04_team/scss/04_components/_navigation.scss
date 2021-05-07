@@ -1,36 +1,38 @@
 .navigation {
-    @include flexbox($justify-content: center);
+  @include flexbox($justify-content: center);
 
-    &__list {
-        @include flexbox();
-        width: 100%;
-        padding: 0 em(16);
-        text-align: center;
-        max-width: em(616);
-    }
+  &__list {
+    @include flexbox();
+    width: 100%;
+    padding: 0 em(16);
+    text-align: center;
+    max-width: em(616);
+  }
 
-    &__item {
-        width: 25%;
-        color: $fontGray;
-    }
+  &__item {
+    width: 25%;
+    color: $fontGray;
 
-    &__link {
-        display: inline-block;
-        font-size: 15px;
-        line-height: em(48, 15);
-        height: em(40);
-        width: 100%;
-    }
 
-    @at-root .is-selected {
-        @include flexbox($direction: column);
-        font-weight: 800;
+  }
 
-        &::after {
-            content: "";
-            width: 100%;
-            height: em(2);
-            background: $black;
-        }
-    }
+  &__link {
+    display: inline-block;
+    font-size: 15px;
+    line-height: em(48, 15);
+    height: em(40);
+    width: 100%;
+    height: 100%;
+
+    &:hover,
+    &:focus {
+        background: rgba($color: $accentKakao, $alpha: 0.8);
+      }
+  }
+
+  @at-root .is-selected {
+    @include flexbox($direction: column);
+    font-weight: 800;
+    border-bottom: em(2) solid $black;
+  }
 }

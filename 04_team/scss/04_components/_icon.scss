@@ -10,6 +10,8 @@
   // 아이콘 요소를 보이지 않도록 설정할 때
   &None {
     display: none;
+    min-width: 44px;
+    max-width: 44px;
   }
 
   &::before {
