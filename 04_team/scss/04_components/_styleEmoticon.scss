@@ -31,11 +31,11 @@
   .hashTag--small.hashTag--mint {
     @include hashTagColor($bgc: $SecondaryMint);
   }
-  .hashTag--big.hashTag--kakaoYellow {
-    @include hashTagColor($c: $SecondaryKakaoYellow);
+  .hashTag--big.hashTag--red{
+    @include hashTagColor($c: $SecondaryRed2);
   }
-  .hashTag--small.hashTag--kakaoYellow {
-    @include hashTagColor($bgc: $SecondaryKakaoYellow);
+  .hashTag--small.hashTag--red {
+    @include hashTagColor($bgc: $SecondaryRed2);
   }
   .hashTag--big.hashTag--skyblue {
     @include hashTagColor($c: $SecondarySkyblue);
